@@ -1,13 +1,13 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Peters/tle3T_phase2
-SUBJ_EXPR=EPL14_LHS_{subject}  #search string in patient_name
+BIDS_DIR=$AUTOBIDS_DATA/MacDonald/YoungControls_3T
+SUBJ_EXPR={subject}  #search string for patientname
 
-HEURISTIC=$AUTOBIDS_DIR/cfg/heuristics/EPL14B_3T.py
+HEURISTIC=$AUTOBIDS_DIR/cfg/heuristics/cfmm_bold_rest.py
 
 DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids
 PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/mriqc
 
-
 EMAIL_NOTIFICATION=alik@robarts.ca
+
