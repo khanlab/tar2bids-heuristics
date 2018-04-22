@@ -5,7 +5,7 @@ BIDS_DIR=$AUTOBIDS_DATA/Palaniyappan/LAM_reproc
 SUBJ_EXPR=*_{subject}  #search string for patientname
 
 
-HEURISTIC=$AUTOBIDS_DIR/cfg/heuristics/cfmm_bold_rest.py
+HEURISTIC=cfmm_bold_rest.py
 
 DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids
 PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids

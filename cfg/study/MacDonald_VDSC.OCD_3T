@@ -3,7 +3,7 @@
 SUBJ_EXPR=[oO][cC][dD]_3[tT]_{subject}  #search string in patient_name
 
 BIDS_DIR=/project/6007967/akhanf/cfmm-bids/data/MacDonald/OCD_3T
-HEURISTIC=$AUTOBIDS_DIR/cfg/heuristics/cfmm_bold_rest.py
+HEURISTIC=cfmm_bold_rest.py
 
 
 

@@ -5,7 +5,7 @@ SUBJ_EXPR=*[tT][oO][pP][sS][yY]_{subject}  #search string for patientname
 #SUBJ_EXPR=*.TOPSY.{subject}.*.*  #search string inside tar (from student HD)
 
 
-HEURISTIC=$AUTOBIDS_DIR/cfg/heuristics/cfmm_bold_rest.py
+HEURISTIC=cfmm_bold_rest.py
 
 DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids
 PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids
