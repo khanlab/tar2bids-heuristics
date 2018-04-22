@@ -5,9 +5,9 @@ SUBJ_EXPR=*[xX]_{subject}  #search string in patient_name
 
 HEURISTIC=cfmm_base.py
 
-DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids
-PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids
-#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/mriqc
+DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids # unused now with tar2bids
+PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids #unused now with tar2bids
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
 
 
-EMAIL_NOTIFICATION=alik@robarts.ca
+EMAIL_NOTIFICATION=alik@robarts.ca  #not enabled
