@@ -8,5 +8,5 @@ HEURISTIC=Menon_CogMS.py
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
 
 GLOBUS_BIDS_ENDPOINT=5f8c7bf6-5076-11e8-9021-0a6d4e044368
-EMAIL_NOTIFICATION=alik@robarts.ca #,gngo4@uwo.ca
+EMAIL_NOTIFICATION=alik@robarts.ca,gngo4@uwo.ca
 

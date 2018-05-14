@@ -5,8 +5,6 @@ SUBJ_EXPR=*[xX]_{subject}  #search string in patient_name
 
 HEURISTIC=cfmm_base.py
 
-#DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids # unused now with tar2bids, can remove
-#PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids #unused now with tar2bids, can remove
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
 
 GLOBUS_BIDS_ENDPOINT=867f3310-374f-11e8-b96a-0ac6873fc732
