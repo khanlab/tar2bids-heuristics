@@ -2,9 +2,6 @@
 
 SUBJ_EXPR=*_{subject}  #search string for patientname
 
-#default: 
-#BIDS_DIR=$AUTOBIDS_DATA/{PI}/{PROJECT}
-
 
 HEURISTIC=cfmm_bold_rest.py
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SUBJ_EXPR={subject}  #search string for patientname
+SUBJ_EXPR=*_{subject}  #search string for patientname
 
 
 HEURISTIC=cfmm_base.py

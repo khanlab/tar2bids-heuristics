@@ -1,0 +1,13 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Khan/CadaverMRI
+SUBJ_EXPR=*CAD{subject}_{session}  #search string for patientname
+
+
+HEURISTIC=$BIDS_DIR/sourcedata/cfmm_base_CAD.py
+
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
+
+GLOBUS_BIDS_ENDPOINT=
+EMAIL_NOTIFICATION=alik@robarts.ca
+
