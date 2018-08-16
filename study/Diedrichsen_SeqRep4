@@ -2,11 +2,13 @@
 
 SUBJ_EXPR=*_{subject}  #search string for patientname
 
+BIDS_DIR=$AUTOBIDS_DATA/private/Diedrichsen/SeqRep4
 
-HEURISTIC=cfmm_bold_rest.py
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/Diedrichsen_SeqRep4.py
 
-#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
 
-GLOBUS_BIDS_ENDPOINT=
-EMAIL_NOTIFICATION=alik@robarts.ca
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/gradcorrect7T
+
+GLOBUS_BIDS_ENDPOINT=f82c4e34-57b2-11e8-9104-0a6d4e044368
+EMAIL_NOTIFICATION=alik@robarts.ca,giacomo.ariani@gmail.com
 

@@ -3,7 +3,7 @@
 SUBJ_EXPR=*_{subject}  #search string for patientname
 
 
-HEURISTIC=cfmm_bold_rest.py
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/Kohler_HcECT.py
 
 #DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids
 #PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids

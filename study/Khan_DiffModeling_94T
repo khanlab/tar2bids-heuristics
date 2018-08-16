@@ -2,9 +2,11 @@
 
 SUBJ_EXPR=*_{subject}  #search string for patientname
 
-BIDS_DIR=$AUTOBIDS_DATA/private/Goodale/ABBI
+#default: 
+#BIDS_DIR=$AUTOBIDS_DATA/{PI}/{PROJECT}
 
-HEURISTIC=cfmm_base.py
+
+HEURISTIC=cfmm_bold_rest.py
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
 

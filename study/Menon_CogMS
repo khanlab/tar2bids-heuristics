@@ -3,6 +3,8 @@
 SUBJ_EXPR=*[cC_]{subject}[_-]{session}
 
 
+BIDS_DIR=$AUTOBIDS_DATA/private/Menon/CogMS
+
 HEURISTIC=Menon_CogMS.py
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
