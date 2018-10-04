@@ -1,11 +1,11 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Khan/SNSX_7T
-SUBJ_EXPR=*[xX]_{subject}  #search string in patient_name
+BIDS_DIR=$AUTOBIDS_DATA/MacDonald/addiction_7T
+SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
 
-HEURISTIC=cfmm_base.py
+HEURISTIC=`realpath ~/....`
 
-POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
 
 GLOBUS_BIDS_ENDPOINT=
 EMAIL_NOTIFICATION=switt4@uwo.ca,kvanhedg@uwo.ca 
