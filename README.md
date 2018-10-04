@@ -16,11 +16,11 @@ Copy and paste the following code block to:
 * Set-up your bashrc
 ```
 git clone http://github.com/khanlab/autobids ~/autobids
-git clone http://git.sharcnet.ca/khanlab/autobids-graham ~/autobids
+git clone http://git.sharcnet.ca/khanlab/autobids-graham ~/autobids-graham
 echo "export AUTOBIDS_DIR=`realpath ~/autobids`   #this repository" >> ~/.bashrc
 echo "export AUTOBIDS_DATA=/project/6007967/akhanf/cfmm-bids/data" >> ~/.bashrc
 echo "export PATH=\$AUTOBIDS_DIR/bin:\$AUTOBIDS_DIR/pipelines:\$PATH" >> ~/.bashrc
-echo "export AUTOBIDS_STUDY_CFG_DIR=`realpath ~/autobids-graham/study` " >> ~/.bashrc
+echo "export AUTOBIDS_STUDY_CFG_DIR=`realpath ~/autobids-graham/study`" >> ~/.bashrc
 ```
 Note: you need to re-login after performing this step.
 
