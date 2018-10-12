@@ -1,0 +1,11 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/MacDonald/addiction_7T/
+SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
+
+HEURISTIC=`realpath ~/projects/rrg-akhanf/cfmm-bids/MacDonald/addiction_7T/sourcedata/heuristics/addiction_heuristic_A001_1x.py`
+
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
+
+GLOBUS_BIDS_ENDPOINT=
+EMAIL_NOTIFICATION=switt4@uwo.ca,kvanhedg@uwo.ca 
