@@ -7,5 +7,5 @@ HEURISTIC=/project/6007967/akhanf/cfmm-bids/data/MacDonald/addiction_7T/sourceda
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
 
-GLOBUS_BIDS_ENDPOINT=
+GLOBUS_BIDS_ENDPOINT=cf8c39b8-f4d7-11e8-8cd0-0a1d4c5c824a
 EMAIL_NOTIFICATION=switt4@uwo.ca,kvanhedg@uwo.ca 
