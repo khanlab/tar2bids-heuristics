@@ -6,7 +6,7 @@ SUBJ_EXPR=*_{subject}  #search string for patientname
 #BIDS_DIR=$AUTOBIDS_DATA/private/{PI}/{PROJECT}
 
 
-HEURISTIC=cfmm_bold_rest.py
+HEURISTIC=cfmm_base.py
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/mriqc
 
