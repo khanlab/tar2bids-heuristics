@@ -9,5 +9,5 @@ DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids
 PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/mriqc
 
-
-EMAIL_NOTIFICATION=alik@robarts.ca
+GLOBUS_BIDS_ENDPOINT=31392632-590e-11e8-9121-0a6d4e044368
+EMAIL_NOTIFICATION=alik@robarts.ca,lkasa@uwo.ca

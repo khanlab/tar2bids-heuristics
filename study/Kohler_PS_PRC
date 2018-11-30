@@ -5,9 +5,8 @@ SUBJ_EXPR=*_{subject}  #search string for patientname
 
 HEURISTIC=cfmm_PS_PRC_3T.py
 
-DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids
-PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/mriqc
 
-EMAIL_NOTIFICATION=alik@robarts.ca
+GLOBUS_BIDS_ENDPOINT=7d402d3c-ce6b-11e8-8c6d-0a1d4c5c824a
+EMAIL_NOTIFICATION=alik@robarts.ca,kferko@uwo.ca
 
