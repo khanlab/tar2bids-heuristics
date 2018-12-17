@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/private/MacDonald/addiction_7T_sw/
+BIDS_DIR=$AUTOBIDS_DATA/private/MacDonald/addiction_7T/
 SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/addiction_heuristic.py
