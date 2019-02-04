@@ -45,29 +45,35 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
        
-        if ('Movie' in (s.series_description).strip()):
+        if ('Hitchcock' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
                     info[movie_sbref].append({'item': s.series_id})
-            elif (s.dim4>1):
+            elif (s.dim4==480):
                     info[movie].append({'item': s.series_id})
+                    
+        if ('chaplain' in (s.series_description).strip()):
+            if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
+                    info[movie_sbref].append({'item': s.series_id})
+            elif (s.dim4==215):
+                    info[movie].append({'item': s.series_id})            
         
         elif ('CueReactivity' in (s.series_description).strip()):
             if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
                     info[cuereactivity_sbref].append({'item': s.series_id})
-            elif (s.dim4>1):
+            elif (s.dim4>199):
                     info[cuereactivity].append({'item': s.series_id})
 
         elif ('GreenTask' in (s.series_description).strip()):
             if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
                     info[green_sbref].append({'item': s.series_id})
-            elif (s.dim4>1):
+            elif (s.dim4>75):
                     info[green].append({'item': s.series_id})
         
         elif ('bold' in (s.series_description).strip()):
             if ('rs' in (s.series_description).strip()):
                 if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
                     info[rest_sbref].append({'item': s.series_id})
-                elif (s.dim4>1):
+                elif (s.dim4>199):
                     info[rest].append({'item': s.series_id})
                     
             if ('PA' in (s.series_description).strip()):
