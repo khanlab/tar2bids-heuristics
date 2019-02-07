@@ -8,4 +8,4 @@ SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
 
 GLOBUS_BIDS_ENDPOINT=
-EMAIL_NOTIFICATION=ostanle2@uwo.ca 
+EMAIL_NOTIFICATION=switt4@uwo.ca,ostanle2@uwo.ca 
