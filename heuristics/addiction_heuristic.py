@@ -51,7 +51,7 @@ def infotodict(seqinfo):
             elif (s.dim4==480):
                     info[movie].append({'item': s.series_id})
                     
-        if ('chaplain' in (s.series_description).strip()):
+        elif ('chaplain' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
                     info[movie_sbref].append({'item': s.series_id})
             elif (s.dim4==215):
