@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BIDS_DIR=$AUTOBIDS_DATA/Menon/VisualManganese/
-SUBJ_EXPR=*_[NHP]_{subject}_{session}  #search string in patient_name
+SUBJ_EXPR=*_[nN][hH][pP]_{subject}_{session}  #search string in patient_name
 
 #HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/manganese_heuristic.py
 HEURISTIC=cfmm_base.py
