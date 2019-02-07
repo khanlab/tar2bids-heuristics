@@ -8,4 +8,4 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/mentalchron_heuristic.py
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
 
 GLOBUS_BIDS_ENDPOINT=
-EMAIL_NOTIFICATION=z.fazal@donder.ru.nl
+EMAIL_NOTIFICATION=switt4@uwo.ca,z.fazal@donder.ru.nl
