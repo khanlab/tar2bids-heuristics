@@ -1,11 +1,12 @@
 #!/bin/bash
 
 BIDS_DIR=$AUTOBIDS_DATA/Menon/VisualManganese/
-SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
+SUBJ_EXPR=*_[NHP]_{subject}_{session}  #search string in patient_name
 
 #HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/manganese_heuristic.py
+HEURISTIC=cfmm_base.py
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
 
-GLOBUS_BIDS_ENDPOINT=
+GLOBUS_BIDS_ENDPOINT=fc4028b8-2aef-11e9-9836-0262a1f2f698
 EMAIL_NOTIFICATION=switt4@uwo.ca,ostanle2@uwo.ca 
