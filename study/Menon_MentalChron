@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BIDS_DIR=$AUTOBIDS_DATA/Menon/MentalChron/
-SUBJ_EXPR=*_[subj]_{subject}_{session}  #search string in patient_name
+SUBJ_EXPR=*_[subj]_{subject}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/mentalchron_heuristic.py
 
