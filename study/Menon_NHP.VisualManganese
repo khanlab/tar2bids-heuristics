@@ -3,7 +3,7 @@
 BIDS_DIR=$AUTOBIDS_DATA/Menon/VisualManganese/
 SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
 
-HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/manganese_heuristic.py
+#HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/manganese_heuristic.py
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
 
