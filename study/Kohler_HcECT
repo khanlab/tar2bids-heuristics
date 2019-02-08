@@ -7,7 +7,7 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/Kohler_HcECT.py
 
 #DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids
 #PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids
-POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
+#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
 
 GLOBUS_BIDS_ENDPOINT=997fbe1a-465b-11e8-8e6f-0a6d4e044368
 EMAIL_NOTIFICATION=alik@robarts.ca,schakr28@uwo.ca

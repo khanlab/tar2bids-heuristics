@@ -6,7 +6,6 @@ BIDS_DIR=$AUTOBIDS_DATA/private/Goodale/ABBI
 
 HEURISTIC=cfmm_base.py
 
-#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
 
 GLOBUS_BIDS_ENDPOINT=
 EMAIL_NOTIFICATION=alik@robarts.ca
