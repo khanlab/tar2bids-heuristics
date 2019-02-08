@@ -7,5 +7,5 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/mentalchron_heuristic.py
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T_mriqc
 
-GLOBUS_BIDS_ENDPOINT=85962388-2af0-11e9-9836-0262a1f2f698
+GLOBUS_BIDS_ENDPOINT=eae0f0b8-2bb5-11e9-9351-0e3d676669f4
 EMAIL_NOTIFICATION=switt4@uwo.ca,z.fazal@donder.ru.nl
