@@ -1,0 +1,11 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Ansari/Intergenerational/
+SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
+
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/intergen_heuristic.py
+
+#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
+
+GLOBUS_BIDS_ENDPOINT=
+EMAIL_NOTIFICATION=switt4@uwo.ca,kvanhedg@uwo.ca,lien.peters4@gmail.com
