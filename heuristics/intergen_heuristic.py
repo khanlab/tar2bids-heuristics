@@ -75,20 +75,6 @@ def infotodict(seqinfo):
                     info[rest_sbref].append({'item': s.series_id})
                 elif (s.dim4>199):
                     info[rest].append({'item': s.series_id})
-                    
-            if ('PA' in (s.series_description).strip()):
-                if (s.dim4==1):
-                    if 'SBRef' in (s.series_description).strip():
-                        info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
- #                   else:
- #                       info[fmap].append({'item': s.series_id,'dir': 'PA'})
-
-            if ('AP' in (s.series_description).strip()):
-                if (s.dim4==1):
-                    if 'SBRef' in (s.series_description).strip():
-                        info[fmap_sbref].append({'item': s.series_id,'dir': 'AP'})
- #                   else:
- #                       info[fmap].append({'item': s.series_id,'dir': 'AP'})
 
 
     return info
