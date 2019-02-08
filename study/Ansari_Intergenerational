@@ -9,5 +9,5 @@ HEURISTIC=cfmm_base.py
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
 
-GLOBUS_BIDS_ENDPOINT=
+GLOBUS_BIDS_ENDPOINT=d2979484-2bd4-11e9-9836-0262a1f2f698
 EMAIL_NOTIFICATION=switt4@uwo.ca,kvanhedg@uwo.ca,lien.peters4@gmail.com
