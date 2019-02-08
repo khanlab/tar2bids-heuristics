@@ -15,8 +15,8 @@ def infotodict(seqinfo):
     # call cfmm for general labelling and get dictionary
     info = cfmminfodict(seqinfo)
 
-    task = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-vismot_run-{item:02d}_bold')
-    task_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-vismot_run-{item:02d}_sbref')
+    task = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-vma_run-{item:02d}_bold')
+    task_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-vma_run-{item:02d}_sbref')
 
     info[task]=[]
     info[task_sbref]=[]
