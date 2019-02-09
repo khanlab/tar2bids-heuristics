@@ -20,9 +20,6 @@ def infotodict(seqinfo):
     
     fmap_diff = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_run-{item:02d}_phasediff')
     fmap_magnitude = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_run-{item:02d}_magnitude')
-    
-    del info[fmap_diff]
-    del info[fmap_magnitude]
 
     info[vma]=[]
     info[vma_sbref]=[]
@@ -45,3 +42,4 @@ def infotodict(seqinfo):
                     info[fmap_magnitude].append({'item': s.series_id})
                     
     return info
+    
