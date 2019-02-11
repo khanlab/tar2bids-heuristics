@@ -73,7 +73,7 @@ def infotodict(seqinfo):
             if ('rs' in (s.series_description).strip()):
                 if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
                     info[rest_sbref].append({'item': s.series_id})
-                elif (s.dim4>199):
+                elif (s.dim4>350):
                     info[rest].append({'item': s.series_id})
                     
             if ('PA' in (s.series_description).strip()):
