@@ -3,7 +3,7 @@
 SUBJ_EXPR=*_{subject}  #search string for patientname
 
 #default: 
-#BIDS_DIR=$AUTOBIDS_DATA/private/{PI}/{PROJECT}
+#BIDS_DIR=$AUTOBIDS_DATA/private/{PI}/{PROJECT}/bids
 
 
 HEURISTIC=cfmm_base.py

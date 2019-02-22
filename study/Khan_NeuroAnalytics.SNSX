@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Khan/SNSX_7T
+BIDS_DIR=$AUTOBIDS_DATA/Khan/SNSX_7T/bids
 SUBJ_EXPR=*[xX]_{subject}  #search string in patient_name
 
 HEURISTIC=cfmm_base.py

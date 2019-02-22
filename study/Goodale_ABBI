@@ -2,7 +2,7 @@
 
 SUBJ_EXPR=*_{subject}  #search string for patientname
 
-BIDS_DIR=$AUTOBIDS_DATA/private/Goodale/ABBI
+BIDS_DIR=$AUTOBIDS_DATA/private/Goodale/ABBI/bids
 
 HEURISTIC=cfmm_base.py
 

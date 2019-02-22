@@ -2,7 +2,7 @@
 
 SUBJ_EXPR=[vV][tT][aA][sS][nN]_7[tT]_{subject}  #search string in patient_name
 
-BIDS_DIR=/project/6007967/akhanf/cfmm-bids/data/MacDonald/VTASN_7T
+BIDS_DIR=/project/6007967/akhanf/cfmm-bids/data/MacDonald/VTASN_7T/bids
 HEURISTIC=cfmm_bold_rest.py
 
 

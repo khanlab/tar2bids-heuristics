@@ -2,7 +2,7 @@
 
 SUBJ_EXPR=*_{subject}  #search string for patientname
 
-BIDS_DIR=$AUTOBIDS_DATA/private/Diedrichsen/SeqRep4
+BIDS_DIR=$AUTOBIDS_DATA/private/Diedrichsen/SeqRep4/bids
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/Diedrichsen_SeqRep4.py
 

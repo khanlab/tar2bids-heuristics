@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Peters/tle3T_phase2
+BIDS_DIR=$AUTOBIDS_DATA/Peters/tle3T_phase2/bids
 SUBJ_EXPR=EPL14_LHS_{subject}  #search string in patient_name
 
 HEURISTIC=EPL14B_3T.py

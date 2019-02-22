@@ -4,7 +4,7 @@
 
 SUBJ_EXPR=*_{subject}_{session}  #search string for patientname
 
-BIDS_DIR=$AUTOBIDS_DATA/Peters/tle9.4T_phase2
+BIDS_DIR=$AUTOBIDS_DATA/Peters/tle9.4T_phase2/bids
 
 HEURISTIC=cfmm_bruker.py
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Palaniyappan/LAM_reproc
+BIDS_DIR=$AUTOBIDS_DATA/Palaniyappan/LAM_reproc/bids
 
 SUBJ_EXPR=*_{subject}  #search string for patientname
 

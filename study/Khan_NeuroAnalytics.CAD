@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Khan/CadaverMRI
+BIDS_DIR=$AUTOBIDS_DATA/Khan/CadaverMRI/bids
 SUBJ_EXPR=*CAD{subject}_{session}  #search string for patientname
 
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Peters/tle3T_phase2_Ex7T
+BIDS_DIR=$AUTOBIDS_DATA/Peters/tle3T_phase2_Ex7T/bids
 SUBJ_EXPR=*_Ex7T_{subject}  #search string for patientname
 
 

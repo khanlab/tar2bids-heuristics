@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/MacDonald/YoungControls_3T
+BIDS_DIR=$AUTOBIDS_DATA/MacDonald/YoungControls_3T/bids
 SUBJ_EXPR={subject}  #search string for patientname
 
 HEURISTIC=cfmm_bold_rest.py

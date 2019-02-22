@@ -3,7 +3,7 @@
 #SUBJ_EXPR=RBD_7T_{subject}_{session}  #search string in patient_name 
 SUBJ_EXPR=RBD_7T_{subject} #search string in patient_name -- flatten session level since not all scripts support it yet..
 
-BIDS_DIR=/project/6007967/akhanf/cfmm-bids/data/MacDonald/RBD_7T
+BIDS_DIR=/project/6007967/akhanf/cfmm-bids/data/MacDonald/RBD_7T/bids
 HEURISTIC=cfmm_bold_rest.py
 
 
