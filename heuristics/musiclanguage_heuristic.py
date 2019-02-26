@@ -21,7 +21,7 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
        
-        if ('Run' in (s.series_description).strip() && s.dim4>100):
+        if ('Run' in (s.series_description).strip()) and (s.dim4>100):
             info[task].append({'item': s.series_id})
 
     return info
