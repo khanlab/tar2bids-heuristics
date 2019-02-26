@@ -1,0 +1,11 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Johnsrude/Music_Language/bids
+SUBJ_EXPR=*_{subject}  #search string in patient_name
+
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/musiclanguage_heuristic.py
+
+#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
+
+GLOBUS_BIDS_ENDPOINT=c579f598-39db-11e9-9839-0262a1f2f698
+EMAIL_NOTIFICATION=switt4@uwo.ca,christinavb@gmail.com
