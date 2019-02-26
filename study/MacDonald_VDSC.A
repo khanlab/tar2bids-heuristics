@@ -5,7 +5,7 @@ SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/addiction_heuristic.py
 
-POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
 
 GLOBUS_BIDS_ENDPOINT=e72fe18c-02ce-11e9-9345-0e3d676669f4
 EMAIL_NOTIFICATION=switt4@uwo.ca,kvanhedg@uwo.ca
