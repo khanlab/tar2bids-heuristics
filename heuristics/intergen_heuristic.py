@@ -16,65 +16,38 @@ def infotodict(seqinfo):
     info = cfmminfodict(seqinfo)
 
     rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
-    rest_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_sbref')
 
-    movie = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-movie_run-{item:02d}_bold')
-    movie_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-movie_run-{item:02d}_sbref')
+    inscape = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-inscape_run-{item:02d}_bold')
 
-    cuereactivity = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-cuereactivity_run-{item:02d}_bold')
-    cuereactivity_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-cuereactivity_run-{item:02d}_sbref')
+    math = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-math_run-{item:02d}_bold')
 
-    green = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-green_run-{item:02d}_bold')
-    green_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-green_run-{item:02d}_sbref')
+    read = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-read_run-{item:02d}_bold')
 
-    #fmap = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_dir-{dir}_epi')
-    fmap_sbref = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_dir-{dir}_epi')
-
+    line = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-line_run-{item:02d}_bold')
     
 
     info[rest]=[]
-    info[rest_sbref]=[]
-    info[movie]=[]
-    info[movie_sbref]=[]
-    info[cuereactivity]=[]
-    info[cuereactivity_sbref]=[]
-    info[green]=[]
-    info[green_sbref]=[]
-    #info[fmap]=[]
-    info[fmap_sbref]=[]
+    info[inscape]=[]
+    info[math]=[]
+    info[read]=[]
+    info[line]=[]
 
     for idx, s in enumerate(seqinfo):
        
-        if ('Hitchcock' in (s.series_description).strip()):
-            if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
-                    info[movie_sbref].append({'item': s.series_id})
-            elif (s.dim4==480):
-                    info[movie].append({'item': s.series_id})
+        if ('rsfMRI' in (s.series_description).strip()) and (s.dim4==232):
+            info[inscape].append({'item': s.series_id})
                     
-        elif ('chaplain' in (s.series_description).strip()):
-            if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
-                    info[movie_sbref].append({'item': s.series_id})
-            elif (s.dim4==215):
-                    info[movie].append({'item': s.series_id})            
+        elif ('math' in (s.series_description).strip()) and (s.dim4==244):
+            info[math].append({'item': s.series_id})            
         
-        elif ('CueReactivity' in (s.series_description).strip()):
-            if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
-                    info[cuereactivity_sbref].append({'item': s.series_id})
-            elif (s.dim4>199):
-                    info[cuereactivity].append({'item': s.series_id})
+        elif ('read' in (s.series_description).strip()) and (s.dim4==244):
+            info[read].append({'item': s.series_id})
 
-        elif ('GreenTask' in (s.series_description).strip()):
-            if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
-                    info[green_sbref].append({'item': s.series_id})
-            elif (s.dim4>75):
-                    info[green].append({'item': s.series_id})
+        elif ('line' in (s.series_description).strip()) and (s.dim4==244):
+            info[line].append({'item': s.series_id})
         
-        elif ('bold' in (s.series_description).strip()):
-            if ('rs' in (s.series_description).strip()):
-                if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
-                    info[rest_sbref].append({'item': s.series_id})
-                elif (s.dim4>199):
-                    info[rest].append({'item': s.series_id})
+        elif ('restingState' in (s.series_description).strip()) and (s.dim4==360):
+            info[rest].append({'item': s.series_id})
 
 
     return info
