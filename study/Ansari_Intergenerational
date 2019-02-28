@@ -3,11 +3,9 @@
 BIDS_DIR=$AUTOBIDS_DATA/Ansari/Intergenerational/bids
 SUBJ_EXPR=*_{subject}  #search string in patient_name
 
-#HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/intergen_heuristic.py
-
-HEURISTIC=cfmm_base.py
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/intergen_heuristic.py
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
 
 GLOBUS_BIDS_ENDPOINT=d2979484-2bd4-11e9-9836-0262a1f2f698
-EMAIL_NOTIFICATION=switt4@uwo.ca
+EMAIL_NOTIFICATION=switt4@uwo.ca,lien.peters4@gmail.com
