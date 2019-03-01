@@ -5,6 +5,7 @@ SUBJ_EXPR=*_{subject}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/mcc_heuristic.py
 
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.4`
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
 
 GLOBUS_BIDS_ENDPOINT=f8b1c6d0-3b88-11e9-a613-0a54e005f950
