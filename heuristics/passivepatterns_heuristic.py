@@ -23,7 +23,7 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
        
-        if ('bold' in (s.series_description).strip()):
+        if ('bold' in (s.series_description).strip()) and ('M' in (s.image_type[2].strip()) ):
             if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
                 info[task_sbref].append({'item': s.series_id})
             elif (s.dim4>1):
