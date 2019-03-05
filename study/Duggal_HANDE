@@ -1,0 +1,9 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Duggal/HANDE/bids
+SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
+
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/hande_heuristic.py
+
+GLOBUS_BIDS_ENDPOINT=b0fb388c-3f55-11e9-a618-0a54e005f950
+EMAIL_NOTIFICATION=switt4@uwo.ca
