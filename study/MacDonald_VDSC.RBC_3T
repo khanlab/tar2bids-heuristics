@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SUBJ_EXPR=RBD_3T_{subject} #search string in patient_name -- flatten session level since not all scripts support it yet..
+SUBJ_EXPR=RBD_3T_{subject}_{session} #search string in patient_name -- flatten session level since not all scripts support it yet..
 
 BIDS_DIR=$AUTOBIDS_DATA/MacDonald/RBD_3T/bids
 
