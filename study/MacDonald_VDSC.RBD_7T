@@ -4,8 +4,8 @@ SUBJ_EXPR=RBD_7T_{subject} #search string in patient_name -- flatten session lev
 
 BIDS_DIR=$AUTOBIDS_DATA/MacDonald/RBD_7T/bids
 
-#HEURISTIC=cfmm_bold_rest.py
-HEURISTIC=rbd_heuristic.py
+HEURISTIC=cfmm_bold_rest.py
+#HEURISTIC=rbd_heuristic.py
 
 
 DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids
