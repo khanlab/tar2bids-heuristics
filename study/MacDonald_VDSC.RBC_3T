@@ -1,0 +1,17 @@
+#!/bin/bash
+
+SUBJ_EXPR=RBD_3T_{subject} #search string in patient_name -- flatten session level since not all scripts support it yet..
+
+BIDS_DIR=$AUTOBIDS_DATA/MacDonald/RBD_3T/bids
+
+HEURISTIC=cfmm_bold_rest.py
+#HEURISTIC=rbd_heuristic.py
+
+
+DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids
+PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids
+#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/mriqc
+#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
+
+
+EMAIL_NOTIFICATION=switt4@uwo.ca
