@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Kohler/ppc_md/bids
+BIDS_DIR=$AUTOBIDS_DATA/Kohler/PPC_MD/bids
 SUBJ_EXPR=*_{subject}  #search string in patient_name
 
 #HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/ppc_md_heuristic.py
