@@ -29,18 +29,16 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
 
-        if ('bold' in (s.protocol_name).strip() or 'epfid' in (s.protocol_name).strip() or 'mbep2d' in (s.series_description).strip() or 'ep_bold' in (s.series_description).strip() and not ('diff' in s.protocol_name or 'DWI' in s.series_description)):
-            
-            if ('lifetime' in (s.series_description).strip() and s.dim4>150):
-                info[task_lifetime].append({'item': s.series_id})
+        if ('lifetime' in (s.series_description).strip() and s.dim4>150):
+            info[task_lifetime].append({'item': s.series_id})
 
-            elif ('PRC_localizer' in (s.series_description).strip().lower() and 'reverse' not in (s.series_description).strip().lower() and 'TE25' not in (s.series_description).strip().lower()):
-                info[task_localizer].append({'item': s.series_id})
+        elif ('PRC_localizer' in (s.series_description).strip() and 'reverse' not in (s.series_description).strip() and 'TE25' not in (s.series_description).strip()):
+            info[task_localizer].append({'item': s.series_id})
 
-            elif ('PRC_localizer' in (s.series_description).strip().lower() and 'reverse' in (s.series_description).strip().lower()):
-                info[task_localizerReverse].append({'item': s.series_id})
+        elif ('PRC_localizer' in (s.series_description).strip() and 'reverse' in (s.series_description).strip()):
+            info[task_localizerReverse].append({'item': s.series_id})
 
-            elif ('PRC_localizer' in (s.series_description).strip().lower() and 'TE25' in (s.series_description).strip().lower()):
-                info[task_localizerTE25].append({'item': s.series_id})
+        elif ('PRC_localizer' in (s.series_description).strip() and 'TE25' in (s.series_description).strip()):
+            info[task_localizerTE25].append({'item': s.series_id})
                    
     return info
