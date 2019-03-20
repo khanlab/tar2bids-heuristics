@@ -29,7 +29,7 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
 
-        if ('bold' in (s.sequence_name).strip() or 'epfid' in (s.sequence_name).strip() or 'mbep2d' in (s.series_name).strip() or 'ep_bold' in (s.sequence_name).strip() and not ('diff' in s.protocol_name or 'DWI' in s.series_description)):
+        if ('bold' in (s.protocol_name).strip() or 'epfid' in (s.series_description).strip() or 'mbep2d' in (s.series_description).strip() or 'ep_bold' in (s.series_description).strip() and not ('diff' in s.protocol_name or 'DWI' in s.series_description)):
             
             if ('lifetime' in (s.series_description).strip() and s.dim4>150):
                 info[task_lifetime].append({'item': s.series_id})
