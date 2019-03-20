@@ -38,7 +38,7 @@ def infotodict(seqinfo):
                 info[task_localizer].append({'item': s.series_id})
 
             elif ('PRC_localizer' in (s.series_description).strip().lower() and 'reverse' in (s.series_description).strip().lower()):
-                info[info_localizerreverse].append({'item': s.series_id})
+                info[task_localizerreverse].append({'item': s.series_id})
 
             elif ('PRC_localizer' in (s.series_description).strip().lower() and 'TE25' in (s.series_description).strip().lower()):
                 info[task_localizerTE25].append({'item': s.series_id})
