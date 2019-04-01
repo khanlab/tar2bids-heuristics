@@ -9,4 +9,5 @@ TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.4`
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
 
 GLOBUS_BIDS_ENDPOINT=12ac3b00-3f54-11e9-a618-0a54e005f950
-EMAIL_NOTIFICATION=switt4@uwo.ca,mverma8@uwo.ca
+EMAIL_NOTIFICATION=switt4@uwo.ca
+#EMAIL_NOTIFICATION=switt4@uwo.ca,mverma8@uwo.ca
