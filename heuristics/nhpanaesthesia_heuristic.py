@@ -35,15 +35,15 @@ def infotodict(seqinfo):
        
         if ('Visual' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
-                    info[movie_sbref].append({'item': s.series_id})
+                    info[visual_sbref].append({'item': s.series_id})
             elif (s.dim4>1):
-                    info[movie].append({'item': s.series_id})
+                    info[visual].append({'item': s.series_id})
                     
         elif ('Somat' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
-                    info[movie_sbref].append({'item': s.series_id})
+                    info[somat_sbref].append({'item': s.series_id})
             elif (s.dim4>1):
-                    info[movie].append({'item': s.series_id})            
+                    info[somat].append({'item': s.series_id})            
         
         elif ('rs' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
