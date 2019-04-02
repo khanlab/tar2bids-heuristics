@@ -3,9 +3,10 @@
 BIDS_DIR=$AUTOBIDS_DATA/Goodale/PHC_Context/bids
 SUBJ_EXPR=*_{subject}  #search string in patient_name
 
-HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/phccontext_heuristic.py
+#HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/phccontext_heuristic.py
+HEURISTIC=cfmm_bold_rest.py
 
-#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.4`
 
-GLOBUS_BIDS_ENDPOINT=
-EMAIL_NOTIFICATION=switt4@uwo.ca
+GLOBUS_BIDS_ENDPOINT=6e7713f0-555d-11e9-9e6e-0266b1fe9f9e
+EMAIL_NOTIFICATION=switt4@uwo.ca,d.proklova@gmail.com
