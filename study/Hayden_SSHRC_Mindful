@@ -1,0 +1,9 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Hayden/SSHRC_Mindful_Pilot/bids
+SUBJ_EXPR=*_{subject}  #search string in patient_name
+
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/sshrc_mindful_heuristic.py
+
+GLOBUS_BIDS_ENDPOINT=
+EMAIL_NOTIFICATION=switt4@uwo.ca,mvande66@uwo.ca
