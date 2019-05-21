@@ -19,8 +19,17 @@ def infotodict(seqinfo):
 
     mindful = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-mindful_run-{item:02d}_bold')
     
+    rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
+    
+    control1 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-control1_run-{item:02d}_bold')
+    
+    control2 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-control2_run-{item:02d}_bold')
+    
     info[soundcheck]=[]
     info[mindful]=[]
+    info[rest] = []
+    info[control1] = []
+    info[control2] = []
 
     for idx, s in enumerate(seqinfo):
        
@@ -30,6 +39,18 @@ def infotodict(seqinfo):
                     
         elif ('mindful' in (s.series_description).strip()):
             if (s.dim4>1):
-                    info[mindful].append({'item': s.series_id})            
+                    info[mindful].append({'item': s.series_id})
+        
+        elif ('restingState' in (s.series_description).strip()):
+            if (s.dim4>1):
+                    info[rest].append({'item': s.series_id}) 
+                    
+        elif ('control1' in (s.series_description).strip()):
+            if (s.dim4>1):
+                    info[control1].append({'item': s.series_id})
+                    
+        elif ('control2' in (s.series_description).strip()):
+            if (s.dim4>1):
+                    info[control2].append({'item': s.series_id})
                     
     return info
