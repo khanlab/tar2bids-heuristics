@@ -5,7 +5,8 @@ SUBJ_EXPR=*[xX]3_{subject}  #search string in patient_name
 
 HEURISTIC=cfmm_base.py
 
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.4b`
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
 
 GLOBUS_BIDS_ENDPOINT=6c106906-d216-11e8-8c70-0a1d4c5c824a
-EMAIL_NOTIFICATION=alik@robarts.ca,jlau287@uwo.ca 
+EMAIL_NOTIFICATION=alik@robarts.ca,jlau287@uwo.ca,schakr28@uwo.ca

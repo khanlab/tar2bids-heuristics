@@ -1,11 +1,13 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Khan/SNSX_7T/bids
+BIDS_DIR=$AUTOBIDS_DATA/Khan/SNSX_7T_fresh/bids
 SUBJ_EXPR=*[xX]_{subject}  #search string in patient_name
 
 HEURISTIC=cfmm_base.py
 
-POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.1a
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.4b`
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
 
 GLOBUS_BIDS_ENDPOINT=867f3310-374f-11e8-b96a-0ac6873fc732
 EMAIL_NOTIFICATION=alik@robarts.ca,jlau287@uwo.ca,greydon.gilmore@gmail.com,Nickolas.Christidis@lhsc.on.ca
+#EMAIL_NOTIFICATION=alik@robarts.ca
