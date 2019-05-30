@@ -1,0 +1,9 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Bodell/PeerStudy/bids
+SUBJ_EXPR=*_{subject}  #search string in patient_name
+
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/peerstudy_heuristic.py
+
+GLOBUS_BIDS_ENDPOINT=0df42f8e-8151-11e9-8e63-029d279f7e24
+EMAIL_NOTIFICATION=switt4@uwo.ca,clowe3@uwo.ca
