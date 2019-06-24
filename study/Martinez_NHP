@@ -1,12 +1,13 @@
 #!/bin/bash
 
-SUBJ_EXPR={subject}  #search string for patientname
-
+BIDS_DIR=$AUTOBIDS_DATA/Martinez/LyndonMRI_20190620/bids
+SUBJ_EXPR=*[nN][hH][pP]_{subject}  #search string for patientname
 
 HEURISTIC=cfmm_base.py
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/mriqc
-POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
 
-EMAIL_NOTIFICATION=alik@robarts.ca
+GLOBUS_BIDS_ENDPOINT=1d391284-969b-11e9-b80b-0a37f382de32
+EMAIL_NOTIFICATION=switt4@uwo.ca,bmahmou2@uwo.ca
 
