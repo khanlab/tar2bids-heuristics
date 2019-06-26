@@ -6,7 +6,7 @@ SUBJ_EXPR=*[nN][hH][pP]_3[tT]_{subject}  #search string for patientname
 HEURISTIC=cfmm_base.py
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/mriqc
-#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.1
 
 GLOBUS_BIDS_ENDPOINT=
 EMAIL_NOTIFICATION=switt4@uwo.ca,bmahmou2@uwo.ca
