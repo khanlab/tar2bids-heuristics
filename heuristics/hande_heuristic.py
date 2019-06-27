@@ -24,11 +24,11 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
        
-        if ('LH' in (s.series_description).strip()):
+        if ('LH' or 'lh' in (s.series_description).strip()):
             if (s.dim4>1):
                     info[lh].append({'item': s.series_id})
                     
-        elif ('RH' in (s.series_description).strip()):
+        elif ('RH' or 'rh' in (s.series_description).strip()):
             if (s.dim4>1):
                     info[rh].append({'item': s.series_id})            
                     
