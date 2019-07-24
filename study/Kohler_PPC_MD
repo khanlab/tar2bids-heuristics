@@ -4,7 +4,7 @@ BIDS_DIR=$AUTOBIDS_DATA/Kohler/PPC_MD/bids
 SUBJ_EXPR=*_{subject}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/ppc_md_heuristic.py
-TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:latest`
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.4c`
 #HEURISTIC=cfmm_bold_rest.py
 
 GLOBUS_BIDS_ENDPOINT=924115d0-4980-11e9-a61a-0a54e005f950
