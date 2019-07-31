@@ -1,0 +1,11 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Johnsrude/SpokenStories/bids
+SUBJ_EXPR=*_{subject}  #search string in patient_name
+
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/spokenstories_heuristic.py
+
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.1
+
+GLOBUS_BIDS_ENDPOINT=ec2f3d62-b3b4-11e9-98d4-0a63aa6b37da
+EMAIL_NOTIFICATION=switt4@uwo.ca,ayshamotala6@gmail.com
