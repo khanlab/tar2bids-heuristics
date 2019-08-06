@@ -17,12 +17,12 @@ def infotodict(seqinfo):
     # call cfmm for general labelling and get dictionary
     info = cfmminfodict(seqinfo)
 
-    task_localizer = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-localizer_run-{item:02d}_echo_bold')
-    task_lifetime = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-lifetime_run-{item:02d}_echo_bold')
-    task_localizerReverse = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-localizerReverse_run-{item:02d}_echo_bold')
-    task_localizerTE25 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-localizerTE25_run-{item:02d}_echo_bold')
-    task_study = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-study_run-{item:02d}_echo_bold')
-    task_keyprac = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-keyprac_run-{item:02d}_echo_bold')
+    task_localizer = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-localizer_run-{item:02d}_bold')
+    task_lifetime = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-lifetime_run-{item:02d}_bold')
+    task_localizerReverse = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-localizerReverse_run-{item:02d}_bold')
+    task_localizerTE25 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-localizerTE25_run-{item:02d}_bold')
+    task_study = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-study_run-{item:02d}_bold')
+    task_keyprac = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-keyprac_run-{item:02d}_bold')
 
     info[task_localizer]=[]
     info[task_lifetime]=[]
