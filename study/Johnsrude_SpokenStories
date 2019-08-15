@@ -2,7 +2,7 @@
 
 #BIDS_DIR=$AUTOBIDS_DATA/Johnsrude/SpokenStories/bids
 BIDS_DIR=/project/6033493/cfmm-bids/Johnsrude/SpokenStories/bids
-BIDS_DIR_GROUP=rrg-conchlab
+GROUP_OWNER=rrg-conchlab
 SUBJ_EXPR=*_{subject}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/spokenstories_heuristic.py
