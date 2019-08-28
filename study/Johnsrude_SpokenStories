@@ -2,7 +2,9 @@
 
 #BIDS_DIR=$AUTOBIDS_DATA/Johnsrude/SpokenStories/bids
 BIDS_DIR=/project/6033493/cfmm-bids/Johnsrude/SpokenStories/bids
-GROUP_OWNER=rrg-conchlab
+
+CC_STORAGE_ALLOC=rrg-conchlab  #overrides the default rrg-akhanf for group ownership
+
 SUBJ_EXPR=*_{subject}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/spokenstories_heuristic.py
