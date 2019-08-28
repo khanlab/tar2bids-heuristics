@@ -7,7 +7,7 @@ SUBJ_EXPR=*_{subject}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/spokenstories_heuristic.py
 
-POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.1
+#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.1
 
 #GLOBUS_BIDS_ENDPOINT=ec2f3d62-b3b4-11e9-98d4-0a63aa6b37da
 GLOBUS_BIDS_ENDPOINT=de624398-ba1f-11e9-9cea-0edb67dd7a14
