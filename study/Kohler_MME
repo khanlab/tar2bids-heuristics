@@ -1,0 +1,11 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Kohler/MME/bids
+SUBJ_EXPR=*_{subject}  #search string in patient_name
+
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/mme_heuristic.py
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5`
+#HEURISTIC=cfmm_bold_rest.py
+
+GLOBUS_BIDS_ENDPOINT=f8aa87bc-d895-11e9-93a0-02ff96a5aa76
+EMAIL_NOTIFICATION=switt4@uwo.ca,gbrook5@uwo.ca
