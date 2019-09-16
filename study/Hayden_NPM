@@ -1,0 +1,9 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Hayden/NPM/bids
+SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
+
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/npm_heuristic.py
+
+GLOBUS_BIDS_ENDPOINT=179a69c0-d892-11e9-93a0-02ff96a5aa76
+EMAIL_NOTIFICATION=switt4@uwo.ca,mvande66@uwo.ca,pliu261@gmail.com
