@@ -6,6 +6,7 @@ SUBJ_EXPR=*_Ex7T_{subject}  #search string for patientname
 
 HEURISTIC=cfmm.py
 
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
 DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids
 PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/mriqc
