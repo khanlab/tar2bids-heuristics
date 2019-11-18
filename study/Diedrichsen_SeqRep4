@@ -6,7 +6,7 @@ BIDS_DIR=$AUTOBIDS_DATA/private/Diedrichsen/SeqRep4/bids
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/Diedrichsen_SeqRep4.py
 
-
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
 
 GLOBUS_BIDS_ENDPOINT=f82c4e34-57b2-11e8-9104-0a6d4e044368
