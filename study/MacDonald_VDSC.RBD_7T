@@ -12,6 +12,6 @@ DCM2BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/heudiconv_bids
 PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/mriqc
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
-
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
 
 EMAIL_NOTIFICATION=switt4@uwo.ca
