@@ -14,4 +14,4 @@ PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
 
 
-EMAIL_NOTIFICATION=switt4@uwo.ca
+EMAIL_NOTIFICATION=switt4@uwo.caTAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d

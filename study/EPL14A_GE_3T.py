@@ -75,3 +75,4 @@ def infotodict(seqinfo):
 
    
     return info
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d
