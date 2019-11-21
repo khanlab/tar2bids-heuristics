@@ -14,4 +14,5 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/spokenstories_heuristic.py
 #GLOBUS_BIDS_ENDPOINT=ec2f3d62-b3b4-11e9-98d4-0a63aa6b37da
 GLOBUS_BIDS_ENDPOINT=de624398-ba1f-11e9-9cea-0edb67dd7a14
 EMAIL_NOTIFICATION=switt4@uwo.ca,ayshamotala6@gmail.com
+
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d

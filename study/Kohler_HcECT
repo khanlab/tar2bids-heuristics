@@ -12,4 +12,5 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/Kohler_HcECT.py
 GLOBUS_BIDS_ENDPOINT=997fbe1a-465b-11e8-8e6f-0a6d4e044368
 EMAIL_NOTIFICATION=alik@robarts.ca,schakr28@uwo.ca,mvarvani@uwo.ca
 
+
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d

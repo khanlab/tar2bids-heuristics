@@ -12,4 +12,5 @@ HEURISTIC=cfmm_bruker.py
 GLOBUS_BIDS_ENDPOINT=
 EMAIL_NOTIFICATION=alik@robarts.ca
 
+
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d

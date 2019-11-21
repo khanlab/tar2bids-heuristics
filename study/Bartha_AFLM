@@ -10,4 +10,5 @@ POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
 GLOBUS_BIDS_ENDPOINT=d20695fe-53cd-11e8-90ab-0a6d4e044368
 EMAIL_NOTIFICATION=alik@robarts.ca,dwong263@uwo.ca
 
+
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d

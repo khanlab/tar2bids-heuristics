@@ -11,4 +11,5 @@ PRE_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/tuneup_bids
 
 GLOBUS_BIDS_ENDPOINT=31392632-590e-11e8-9121-0a6d4e044368
 EMAIL_NOTIFICATION=alik@robarts.ca,lkasa@uwo.ca
+
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d
