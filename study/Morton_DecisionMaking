@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Morton/DecisionMaking/bids
+SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
+
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/decisionmaking_heuristic.py
+
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d`
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.1
+
+GLOBUS_BIDS_ENDPOINT=1a182360-0c8e-11ea-be9b-02fcc9cdd752
+EMAIL_NOTIFICATION=switt4@uwo.ca,clowe3@uwo.ca
