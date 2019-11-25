@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Khan/EpLinkPhase3_7T/bids
+SUBJ_EXPR=*_{subject}  #search string in patient_name
+
+HEURISTIC=cfmm_base.py
+
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3.1
+
+GLOBUS_BIDS_ENDPOINT=41d8c68d-0fb0-11ea-9957-0a8c187e8c12
+EMAIL_NOTIFICATION=alik@robarts.ca,jlau287@uwo.ca,greydon.gilmore@gmail.com,Nickolas.Christidis@lhsc.on.ca
