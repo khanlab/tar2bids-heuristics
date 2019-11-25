@@ -7,3 +7,4 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/peerstudy_heuristic.py
 
 GLOBUS_BIDS_ENDPOINT=0df42f8e-8151-11e9-8e63-029d279f7e24
 EMAIL_NOTIFICATION=switt4@uwo.ca,clowe3@uwo.ca
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d
