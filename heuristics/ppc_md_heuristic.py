@@ -50,6 +50,9 @@ def infotodict(seqinfo):
             
         elif ('keyprac' in (s.series_description).strip() and s.dim4>150):
             info[task_keyprac].append({'item': s.series_id})
+            
+        elif ('lifetime' in (s.series_description).strip() and s.dim4>150):
+            info[task_test].append({'item': s.series_id})
         
                    
     return info
