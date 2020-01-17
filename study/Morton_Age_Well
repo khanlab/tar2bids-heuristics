@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Morton/Age_Well/bids
+SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
+
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/agewell_heuristic.py
+
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d`
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.1
+
+GLOBUS_BIDS_ENDPOINT=09556618-393a-11ea-9710-021304b0cca7
+EMAIL_NOTIFICATION=switt4@uwo.ca,clowe3@uwo.ca
