@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Butler/Misophonia/bids
+SUBJ_EXPR=*_{subject}  #search string in patient_name
+
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/misophonia_heuristic.py
+
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.2
+
+GLOBUS_BIDS_ENDPOINT=99fc54c4-5a46-11ea-9607-0afc9e7dd773
+EMAIL_NOTIFICATION=switt4@uwo.ca,kraymon9@uwo.ca,bbutler9@uwo.ca
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d
