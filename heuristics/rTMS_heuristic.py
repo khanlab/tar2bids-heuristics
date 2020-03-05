@@ -22,7 +22,7 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
        
-        if ('restingState' in (s.series_description).strip()) and (s.dim4==310):
+        if ('restingState' in (s.series_description).strip()) and (s.dim4==600):
             info[rest].append({'item': s.series_id})
 
 
