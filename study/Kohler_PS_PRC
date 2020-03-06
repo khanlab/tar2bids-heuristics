@@ -11,4 +11,4 @@ GLOBUS_BIDS_ENDPOINT=7d402d3c-ce6b-11e8-8c6d-0a1d4c5c824a
 EMAIL_NOTIFICATION=alik@robarts.ca,kferko@uwo.ca
 
 
-TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d`
