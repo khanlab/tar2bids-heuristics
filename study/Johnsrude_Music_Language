@@ -9,4 +9,4 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/musiclanguage_heuristic.py
 
 GLOBUS_BIDS_ENDPOINT=c579f598-39db-11e9-9839-0262a1f2f698
 EMAIL_NOTIFICATION=switt4@uwo.ca,cdernede@uwo.ca
-TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d`
