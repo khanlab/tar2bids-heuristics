@@ -7,4 +7,4 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/hande_heuristic.py
 
 GLOBUS_BIDS_ENDPOINT=b0fb388c-3f55-11e9-a618-0a54e005f950
 EMAIL_NOTIFICATION=switt4@uwo.ca,acronin4@uwo.ca
-TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d`
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
