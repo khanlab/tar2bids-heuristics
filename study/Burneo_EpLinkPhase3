@@ -5,7 +5,7 @@ SUBJ_EXPR=*_[lL][hH][sS]_{subject}  #search string in patient_name
 
 HEURISTIC=cfmm_bold_rest.py
 
-TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5a`
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5e`
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.2
 
 GLOBUS_BIDS_ENDPOINT=76e505a8-faba-11e9-9945-0a8c187e8c12
