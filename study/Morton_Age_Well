@@ -5,7 +5,7 @@ SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/agewell_heuristic.py
 
-TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d`
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.1
 
 GLOBUS_BIDS_ENDPOINT=c4405bee-3c56-11ea-ab4c-0a7959ea6081
