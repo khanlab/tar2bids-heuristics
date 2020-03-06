@@ -9,4 +9,4 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/intergen_heuristic.py
 
 GLOBUS_BIDS_ENDPOINT=d2979484-2bd4-11e9-9836-0262a1f2f698
 EMAIL_NOTIFICATION=switt4@uwo.ca,lien.peters4@gmail.com
-TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d`
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
