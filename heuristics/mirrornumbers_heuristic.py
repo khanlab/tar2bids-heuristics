@@ -20,12 +20,12 @@ def infotodict(seqinfo):
     
 
     #info[rest]=[]
-    info[inscape]=[]
+    info[adaptation]=[]
 
     for idx, s in enumerate(seqinfo):
        
         if ('adaptation' in (s.series_description).strip()) and (s.dim4==594):
-            info[inscape].append({'item': s.series_id})
+            info[adaptation].append({'item': s.series_id})
                     
         #elif ('rest' in (s.series_description).strip()) and (s.dim4==244):
         #    info[rest].append({'item': s.series_id})            
