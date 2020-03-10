@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Ansari/MirrorNumbers/bids
+SUBJ_EXPR=*_{subject}  #search string in patient_name
+
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/mirrornumbers_heuristic.py
+
+#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
+
+GLOBUS_BIDS_ENDPOINT=3fe21eac-630f-11ea-af52-0201714f6eab
+EMAIL_NOTIFICATION=switt4@uwo.ca,aymecita22@gmail.com
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
