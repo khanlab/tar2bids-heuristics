@@ -28,9 +28,9 @@ def infotodict(seqinfo):
        
         if ('RESTING' in (s.series_description).strip()) and (s.dim4==310):
             info[rest].append({'item': s.series_id})
-        elif ('MOTION' in (s.series_description).strip()) and (s.dim4==310):
+        elif ('MOTION' in (s.series_description).strip()) and (s.dim4==360):
             info[motion].append({'item': s.series_id})
-        elif ('FACE' in (s.series_description).strip()) and (s.dim4==310):
+        elif ('FACE' in (s.series_description).strip()) and (s.dim4==360):
             info[face].append({'item': s.series_id})
 
 
