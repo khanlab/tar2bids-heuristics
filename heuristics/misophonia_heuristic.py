@@ -28,6 +28,7 @@ def infotodict(seqinfo):
             info[rest].append({'item': s.series_id})
         elif ('task' in (s.series_description).strip()) and (s.dim4==352):
             info[task].append({'item': s.series_id})
-
+        elif ('run' in (s.series_description).strip()) and (s.dim4==352):
+            info[task].append({'item': s.series_id})
 
     return info
