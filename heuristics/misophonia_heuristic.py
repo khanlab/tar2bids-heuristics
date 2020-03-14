@@ -16,17 +16,18 @@ def infotodict(seqinfo):
     info = cfmminfodict(seqinfo)
 
     rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
-    video = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-video_run-{item:02d}_bold')
+    task = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-task_run-{item:02d}_bold')
 
     info[rest]=[]
+    info[task]=[]
 
 
     for idx, s in enumerate(seqinfo):
        
         if ('RESTING' in (s.series_description).strip()) and (s.dim4==310):
             info[rest].append({'item': s.series_id})
-        elif ('run' in (s.series_description).strip()) or 'video' in (s.series_description.strip()) and (s.dim4==352):
-            info[rest].append({'item': s.series_id})
+        elif ('task' in (s.series_description).strip()) and (s.dim4==352):
+            info[task].append({'item': s.series_id})
 
 
     return info
