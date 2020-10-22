@@ -1,6 +1,7 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Palaniyappan/TOPSYII/bids
+#BIDS_DIR=$AUTOBIDS_DATA/Palaniyappan/TOPSYII/bids
+BIDS_DIR=/project/6033503/cfmm-bids/Palaniyappan/TOPSYII/bids
 SUBJ_EXPR=*[tT][oO][pP][sS][yY]_{subject}_{session}  #search string for patientname
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/topsy2_heuristic.py
