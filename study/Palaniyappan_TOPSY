@@ -1,8 +1,15 @@
 #!/bin/bash
 
-#BIDS_DIR=$AUTOBIDS_DATA/Palaniyappan/TOPSYII/bids
 BIDS_DIR=/project/6033503/cfmm-bids/Palaniyappan/TOPSYII/bids
-SUBJ_EXPR=*[tT][oO][pP][sS][yY]_{subject}_{session}  #search string for patientname
+
+#options for renaming the tar file (parses patientname and renames, using default session if none provided)
+RENAMER_PARSE_PATIENTNAME='(?:[\w]*)(?<=[Tt][Oo][Pp][Ss][Yy]_)(?P<subject>[A-Za-z0-9]+)_*(?P<session>[A-Za-z0-9]+)*)'
+RENAMER_FORMAT_STRING='{pi}_{project}_{yyyymmdd}_{subject}_{session}_{instance}.{hash}.{extension}'
+RENAMER_DEFAULT_SESSION='01'
+
+#subject expression to use after renaming
+SUBJ_EXPR='{subject}_{session}'  #search string for patientname
+
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/topsy2_heuristic.py
 
@@ -11,3 +18,4 @@ POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
 EMAIL_NOTIFICATION=switt4@uwo.ca,rlimongi@uwo.ca
 GLOBUS_BIDS_ENDPOINT=9c77051c-0d62-11eb-81ae-0e2f230cc907
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
+
