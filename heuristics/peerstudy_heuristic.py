@@ -31,7 +31,7 @@ def infotodict(seqinfo):
         if ('resting' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
                     info[rest_sbref].append({'item': s.series_id})
-            elif (s.dim4==360):
+            elif (s.dim4>500):
                     info[rest].append({'item': s.series_id})
                     
         elif ('feedback' in (s.series_description).strip()):
