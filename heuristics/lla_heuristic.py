@@ -45,33 +45,18 @@ def infotodict(seqinfo):
     for idx, s in enumerate(seqinfo):
        
         if ('ActiveRtKnee' in (s.series_description).strip().lower()):
-                if (s.dim4>300):
-                        info[activeRtKnee].append({'item': s.series_id})
-                elif (s.dim4==1):
-                        info[activeRtKnee_sbref].append({'item': s.series_id})
+                info[activeRtKnee].append({'item': s.series_id})
                     
         elif ('ActiveLtKnee' in (s.series_description).strip().lower()):
-                if (s.dim4>300):
-                        info[activeLtKnee].append({'item': s.series_id}) 
-                elif (s.dim4==1):
-                        info[activeLtKnee_sbref].append({'item': s.series_id})
+                info[activeLtKnee].append({'item': s.series_id}) 
 
         elif ('ImaginedRtKnee' in (s.series_description).strip().lower()):
-                if (s.dim4>300):
-                        info[imaginedRtKnee].append({'item': s.series_id}) 
-                elif (s.dim4==1):
-                       info[imaginedRtKnee_sbref].append({'item': s.series_id})
+                info[imaginedRtKnee].append({'item': s.series_id}) 
              
         elif ('ImaginedLtKnee' in (s.series_description).strip().lower()):
-                if (s.dim4>300):
-                        info[imaginedLtKnee].append({'item': s.series_id}) 
-                elif (s.dim4==1):
-                       info[imaginedLtKnee_sbref].append({'item': s.series_id})  
+                info[imaginedLtKnee].append({'item': s.series_id}) 
 
         elif ('ImaginedWalk' in (s.series_description).strip().lower()):
-                if (s.dim4>300):
-                        info[imaginedWalk].append({'item': s.series_id}) 
-                elif (s.dim4==1):
-                        info[imaginedWalk_sbref].append({'item': s.series_id})         
+                info[imaginedWalk].append({'item': s.series_id})         
                     
     return info
