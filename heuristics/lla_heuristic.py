@@ -44,19 +44,19 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
        
-        if ('ActiveRtKnee' in (s.series_description).strip().lower()):
+        if ('ActiveRtKnee' in (s.series_description).strip()):
                 info[activeRtKnee].append({'item': s.series_id})
                     
-        elif ('ActiveLtKnee' in (s.series_description).strip().lower()):
+        elif ('ActiveLtKnee' in (s.series_description).strip()):
                 info[activeLtKnee].append({'item': s.series_id}) 
 
-        elif ('ImaginedRtKnee' in (s.series_description).strip().lower()):
+        elif ('ImaginedRtKnee' in (s.series_description).strip()):
                 info[imaginedRtKnee].append({'item': s.series_id}) 
              
-        elif ('ImaginedLtKnee' in (s.series_description).strip().lower()):
+        elif ('ImaginedLtKnee' in (s.series_description).strip()):
                 info[imaginedLtKnee].append({'item': s.series_id}) 
 
-        elif ('ImaginedWalk' in (s.series_description).strip().lower()):
+        elif ('ImaginedWalk' in (s.series_description).strip()):
                 info[imaginedWalk].append({'item': s.series_id})         
                     
     return info
