@@ -45,18 +45,33 @@ def infotodict(seqinfo):
     for idx, s in enumerate(seqinfo):
        
         if ('ActiveRtKnee' in (s.series_description).strip()):
-                info[activeRtKnee].append({'item': s.series_id})
+                if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
+                    info[activeRtKnee_sbref].append({'item': s.series_id})
+                elif (s.dim4>300):
+                    info[activeRtKnee].append({'item': s.series_id})
                     
         elif ('ActiveLtKnee' in (s.series_description).strip()):
-                info[activeLtKnee].append({'item': s.series_id}) 
+                if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
+                    info[activeLtKnee_sbref].append({'item': s.series_id})
+                elif (s.dim4>300):
+                    info[activeLtKnee].append({'item': s.series_id})
 
         elif ('ImaginedRtKnee' in (s.series_description).strip()):
-                info[imaginedRtKnee].append({'item': s.series_id}) 
+                if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
+                    info[imaginedRtKnee_sbref].append({'item': s.series_id})
+                elif (s.dim4>300):
+                    info[imaginedRtKnee].append({'item': s.series_id})
              
         elif ('ImaginedLtKnee' in (s.series_description).strip()):
-                info[imaginedLtKnee].append({'item': s.series_id}) 
+                if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
+                    info[imaginedLtKnee_sbref].append({'item': s.series_id})
+                elif (s.dim4>300):
+                    info[imaginedLtKnee].append({'item': s.series_id})
 
         elif ('ImaginedWalk' in (s.series_description).strip()):
-                info[imaginedWalk].append({'item': s.series_id})         
+                if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
+                    info[imaginedWalk_sbref].append({'item': s.series_id})
+                elif (s.dim4>300):
+                    info[imaginedWalk].append({'item': s.series_id})       
                     
     return info
