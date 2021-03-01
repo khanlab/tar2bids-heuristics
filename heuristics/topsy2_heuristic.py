@@ -37,7 +37,7 @@ def infotodict(seqinfo):
                 else:
                     info[pa].append({'item': s.series_id,'dir': 'PA'})
 
-            elif:
+            else:
                 if (s.dim4==1):
                     if 'SBRef' in (s.series_description).strip():
                         info[rest_sbref].append({'item': s.series_id,'dir': 'AP'})
