@@ -8,5 +8,5 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/ispc_cl_heuristic.py
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.1
 
-GLOBUS_BIDS_ENDPOINT=d3036ce0-0c8e-11ea-be9b-02fcc9cdd752
+GLOBUS_BIDS_ENDPOINT=cfde21a0-1fbe-4db1-b3b3-5f73bac76acc
 EMAIL_NOTIFICATION=switt4@uwo.ca,gspinel@uwo.ca
