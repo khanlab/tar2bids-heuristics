@@ -8,5 +8,5 @@ HEURISTIC=cfmm_bold_rest.py
 
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.4`
 
-GLOBUS_BIDS_ENDPOINT=6e7713f0-555d-11e9-9e6e-0266b1fe9f9e
+GLOBUS_BIDS_ENDPOINT=4d24ebaf-d8a6-4ce3-ba30-484088b67f42
 EMAIL_NOTIFICATION=switt4@uwo.ca,d.proklova@gmail.com
