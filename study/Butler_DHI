@@ -7,6 +7,6 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/dhi_heuristic.py
 
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.2
 
-GLOBUS_BIDS_ENDPOINT=71d473a6-5a45-11ea-9607-0afc9e7dd773
+GLOBUS_BIDS_ENDPOINT=d7402409-05f6-4e7a-bf24-d793685c152e
 EMAIL_NOTIFICATION=switt4@uwo.ca,jlammert@uwo.ca,bbutler9@uwo.ca
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
