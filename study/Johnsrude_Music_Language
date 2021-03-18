@@ -7,6 +7,6 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/musiclanguage_heuristic.py
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
 
-GLOBUS_BIDS_ENDPOINT=c579f598-39db-11e9-9839-0262a1f2f698
+GLOBUS_BIDS_ENDPOINT=ba349a69-2f51-435c-8676-9ab14feb4d72
 EMAIL_NOTIFICATION=switt4@uwo.ca,cdernede@uwo.ca
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d`
