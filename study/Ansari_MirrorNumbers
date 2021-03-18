@@ -7,6 +7,6 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/mirrornumbers_heuristic.py
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
 
-GLOBUS_BIDS_ENDPOINT=3fe21eac-630f-11ea-af52-0201714f6eab
+GLOBUS_BIDS_ENDPOINT=7fcb0802-74e2-4d98-9086-8f93b1c6c5f2
 EMAIL_NOTIFICATION=switt4@uwo.ca,aymecita22@gmail.com
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
