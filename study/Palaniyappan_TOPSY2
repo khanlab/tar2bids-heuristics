@@ -11,7 +11,8 @@ RENAMER_DEFAULT_SESSION='01'
 SUBJ_EXPR='{subject}_{session}'  #search string for patientname
 
 
-HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/topsy2_heuristic.py
+#HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/topsy2_heuristic.py
+HEURISTIC=cfmm_bold_rest.py
 
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
 
