@@ -5,6 +5,6 @@ SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/hande_heuristic.py
 
-GLOBUS_BIDS_ENDPOINT=bdc7f158-1709-443a-a1c7-05e08f59cfe7
+GLOBUS_BIDS_ENDPOINT=57c38e13-167a-44e5-911c-4bc20ead3f26
 EMAIL_NOTIFICATION=switt4@uwo.ca,acronin4@uwo.ca
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.3d`
