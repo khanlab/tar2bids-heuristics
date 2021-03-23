@@ -32,7 +32,7 @@ def infotodict(seqinfo):
     for idx, s in enumerate(seqinfo):
        
         if ('task' in (s.series_description).strip()) and (s.dim4>1):
-            info[inscape].append({'item': s.series_id})
+            info[task].append({'item': s.series_id})
                     
         elif ('replay' in (s.series_description).strip()) and (s.dim4>1):
             info[replay].append({'item': s.series_id})            
