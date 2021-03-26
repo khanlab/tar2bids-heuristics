@@ -21,13 +21,13 @@ def infotodict(seqinfo):
 
     replay = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-replay_run-{item:02d}_bold')
 
-    task_PA = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-task_dir-PA_run-{item:02d}_bold')
+    #task_PA = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-task_dir-PA_run-{item:02d}_bold')
     
 
     info[rest]=[]
     info[task]=[]
     info[replay]=[]
-    info[task_PA]=[]
+    #info[task_PA]=[]
 
     for idx, s in enumerate(seqinfo):
        
@@ -40,8 +40,8 @@ def infotodict(seqinfo):
         elif ('rest' in (s.series_description).strip()) and (s.dim4>1):
             info[rest].append({'item': s.series_id})
 
-        elif ('PA' in (s.series_description).strip()):
-            info[task_PA].append({'item': s.series_id})
+        #elif ('PA' in (s.series_description).strip()):
+            #info[task_PA].append({'item': s.series_id})
 
 
     return info
