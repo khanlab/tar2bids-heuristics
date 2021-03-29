@@ -18,16 +18,30 @@ def infotodict(seqinfo):
     rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
     rest_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_sbref')
 
+    fmap_sbref = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_dir-{dir}_epi')
+
     info[rest]=[]
     info[rest_sbref]=[]
+    info[fmap_sbref]=[]
 
     for idx, s in enumerate(seqinfo):
 
-        if ('bold' and 'rs' in (s.series_description).strip()):
-            if (s.dim4==1):
-                info[rest_sbref].append({'item'})
-            elif (s.dim4>1):
-                info[rest].append({'item'})
+        if ('bold' in (s.series_description).strip()):
+            if ('rs' in (s.series_description).strip()):
+                if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
+                    info[rest_sbref].append({'item': s.series_id})
+                elif (s.dim4>350):
+                    info[rest].append({'item': s.series_id})
+
+            if ('PA' in (s.series_description).strip()):
+                if (s.dim4==1):
+                    if 'SBRef' in (s.series_description).strip():
+                        info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
+
+            if ('AP' in (s.series_description).strip()):
+                if (s.dim4==1):
+                    if 'SBRef' in (s.series_description).strip():
+                        info[fmap_sbref].append({'item': s.series_id,'dir': 'AP'})
 
 
     return info
