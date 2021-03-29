@@ -29,20 +29,26 @@ def infotodict(seqinfo):
     #info[pa_sbref]=[]
 
     for idx, s in enumerate(seqinfo):
+
+        if ('rs' in (s.series_description).strip()):
+            if (s.dim4==1) and ('SBRef' in (s.series_description).strip()):
+                info[rest_sbref].append({'item'})
+            else:
+                info[rest].append({'item'})
        
-        if ('bold' in (s.series_description).strip()):           
+    #    if ('bold' in (s.series_description).strip()):           
             #if ('PA' in (s.series_description).strip()):
             #    if 'SBRef' in (s.series_description).strip():
             #        info[pa_sbref].append({'item': s.series_id,'dir': 'PA'})
             #    else:
             #        info[pa].append({'item': s.series_id,'dir': 'PA'})
 
-            if ('rs' in (s.series_description).strip()):
-                if (s.dim4==1):
-                    if 'SBRef' in (s.series_description).strip():
-                        info[rest_sbref].append({'item'})
-                    else:
-                        info[rest].append({'item'})
+    #        if ('rs' in (s.series_description).strip()):
+    #            if (s.dim4==1):
+    #                if 'SBRef' in (s.series_description).strip():
+    #                    info[rest_sbref].append({'item'})
+    #                else:
+    #                    info[rest].append({'item'})
 
 
     return info
