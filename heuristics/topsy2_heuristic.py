@@ -27,7 +27,7 @@ def infotodict(seqinfo):
     for idx, s in enumerate(seqinfo):
 
         if ('bold' in (s.series_description).strip()):
-            if (s.dim4>1):
+            if (in s.dim4>1 and 'PA' not in (s.series_description).strip()):
                 info[rest].append({'item': s.series_id})
 
             if ('PA' in (s.series_description).strip()):
