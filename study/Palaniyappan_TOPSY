@@ -4,7 +4,7 @@ BIDS_DIR=/project/6033503/cfmm-bids/Palaniyappan/TOPSYII/bids
 
 #options for renaming the tar file (parses patientname and renames, using default session if none provided)
 RENAMER_PARSE_PATIENTNAME='(?:[\w]*)(?<=[Tt][Oo][Pp][Ss][Yy]_)(?P<subject>[A-Za-z0-9]+)_*(?P<session>[A-Za-z0-9]+)*)'
-RENAMER_FORMAT_STRING='{pi}_{project}_{yyyymmdd}_{subject}_{session}_{instance}.{hash}.{extension}'
+RENAMER_FORMAT_STRING='{pi}_{project}_{yyyymmdd}_{yyyy}_{mm}_{dd}_{subject}_{session}_{instance}.{hash}.{extension}'
 RENAMER_DEFAULT_SESSION='01'
 
 #subject expression to use after renaming
