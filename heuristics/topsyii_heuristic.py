@@ -15,34 +15,34 @@ def infotodict(seqinfo):
     # call cfmm for general labelling and get dictionary
     info = cfmminfodict(seqinfo)
 
-    rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_dir-{dir}_run-{item:02d}_bold')
-    rest_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_dir-{dir}_run-{item:02d}_sbref')
+    rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
+    rest_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_sbref')
 
-    pa = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_dir-{dir}_run-{item:02d}_bold')
-    pa_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_dir-{dir}_run-{item:02d}_sbref')
+    #pa = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_dir-{dir}_run-{item:02d}_bold')
+    #pa_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_dir-{dir}_run-{item:02d}_sbref')
 
     
 
     info[rest]=[]
     info[rest_sbref]=[]
-    info[pa]=[]
-    info[pa_sbref]=[]
+    #info[pa]=[]
+    #info[pa_sbref]=[]
 
     for idx, s in enumerate(seqinfo):
        
         if ('bold' in (s.series_description).strip()):           
-            if ('PA' in (s.series_description).strip()):
-                if 'SBRef' in (s.series_description).strip():
-                    info[pa_sbref].append({'item': s.series_id,'dir': 'PA'})
-                else:
-                    info[pa].append({'item': s.series_id,'dir': 'PA'})
+            #if ('PA' in (s.series_description).strip()):
+            #    if 'SBRef' in (s.series_description).strip():
+            #        info[pa_sbref].append({'item': s.series_id,'dir': 'PA'})
+            #    else:
+            #        info[pa].append({'item': s.series_id,'dir': 'PA'})
 
             if ('rs' in (s.series_description).strip()):
                 if (s.dim4==1):
                     if 'SBRef' in (s.series_description).strip():
-                        info[rest_sbref].append({'item': s.series_id,'dir': 'AP'})
+                        info[rest_sbref].append({'item'})
                     else:
-                        info[rest].append({'item': s.series_id,'dir': 'AP'})
+                        info[rest].append({'item'})
 
 
     return info
