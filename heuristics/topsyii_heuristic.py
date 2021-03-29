@@ -30,7 +30,7 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
 
-        if ('bold' in (s.series_description).strip()):
+        if ('bold' and 'rs' in (s.series_description).strip()):
             if (s.dim4==1):
                 info[rest_sbref].append({'item'})
             else:
