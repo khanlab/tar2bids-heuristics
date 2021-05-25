@@ -4,7 +4,7 @@ SUBJ_EXPR=*_{subject}  #search string for patientname
 
 BIDS_DIR=$AUTOBIDS_DATA/Diedrichsen/SeqRep4/bids
 
-HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/Diedrichsen_SeqRep4.py
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/seqrep4_heuristic.py
 
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
