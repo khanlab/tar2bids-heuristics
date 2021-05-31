@@ -24,14 +24,12 @@ def infotodict(seqinfo):
     info[task]=[]
 
     for idx, s in enumerate(seqinfo):
-
-        if ('ep2d_me3' in (s.series_description.strip()):
        
-            if ('phantomArmMove' in (s.series_description).strip()) and (s.dim4>1):
-                info[task].append({'item': s.series_id})          
+        if ('phantomArmMove' in (s.series_description).strip()) and (s.dim4>1):
+            info[task].append({'item': s.series_id})          
         
-            elif ('head' in (s.series_description).strip()) and (s.dim4>1):
-                info[head].append({'item': s.series_id})
+        elif ('head' in (s.series_description).strip()) and (s.dim4>1):
+            info[head].append({'item': s.series_id})
 
 
     return info
