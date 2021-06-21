@@ -1,0 +1,16 @@
+#!/bin/bash
+
+SUBJ_EXPR=*_{subject}  #search string for patientname
+
+#default: 
+BIDS_DIR=/project/6050199/akhanf/cfmm-bids/data/Khan/LOBE/bids
+
+
+HEURISTIC=LOBE_HCPLS.py 
+
+#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
+
+GLOBUS_BIDS_ENDPOINT=
+EMAIL_NOTIFICATION=alik@robarts.ca,mtayl84@uwo.ca
+
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:latest` #update this to a release when finalized
