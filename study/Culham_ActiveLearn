@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Culham/ActiveLearningPilot/bids
+BIDS_DIR=$AUTOBIDS_DATA/Culham/ActiveLearn/bids
 SUBJ_EXPR=*_{subject}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/activelearn_heuristic.py
