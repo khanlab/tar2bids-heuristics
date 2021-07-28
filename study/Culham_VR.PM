@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BIDS_DIR=$AUTOBIDS_DATA/Culham/Pacman/bids
-SUBJ_EXPR=*_{subject}  #search string in patient_name
+SUBJ_EXPR=*_[P][M]{subject}  #search string in patient_name
 
 HEURISTIC="$AUTOBIDS_STUDY_CFG_DIR/../heuristics/pacman_heuristic.py -D"
 
