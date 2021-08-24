@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BIDS_DIR=$AUTOBIDS_DATA/Culham/Avatar/bids
-SUBJ_EXPR=*_[A][V]{subject}  #search string in patient_name
+SUBJ_EXPR=*_[Aa][Vv]_{subject}  #search string in patient_name
 
 HEURISTIC="$AUTOBIDS_STUDY_CFG_DIR/../heuristics/avatar_heuristic.py -D"
 
