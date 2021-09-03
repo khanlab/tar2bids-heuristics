@@ -25,7 +25,7 @@ def infotodict(seqinfo):
     for idx, s in enumerate(seqinfo):
        
         if ('FACES' in (s.series_description).strip()) and (s.dim4>1):
-            info[main].append({'item': s.series_id})
+            info[faces].append({'item': s.series_id})
                     
         elif ('localizer' in (s.series_description).strip()) and (s.dim4>1):
             info[localizer].append({'item': s.series_id})            
