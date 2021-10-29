@@ -16,8 +16,11 @@ def infotodict(seqinfo):
     info = cfmminfodict(seqinfo)
 
     humour = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-humour_run-{item:02d}_bold')
-    seinfeld = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-seinfeld_run-{item:02d}_bold')
+    seinfelde1 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-seinfeldE1_run-{item:02d}_bold')
+    seinfelde2 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-seinfeldE2_run-{item:02d}_bold')
     hitchcock = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-hitchcock_run-{item:02d}_bold')
+    rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
+    chaplin = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-chaplin_run-{item:02d}_bold')
 
     aspire_mag_echo_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_part-mag_echo_GRE')
     aspire_phase_echo_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_part-phase_echo_GRE')
@@ -25,8 +28,11 @@ def infotodict(seqinfo):
     aspire_R2_star_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_R2star')
 
     info[humour]=[]
-    info[seinfeld]=[]
+    info[seinfelde1]=[]
+    info[seinfelde2]=[]
     info[hitchcock]=[]
+    info[rest]=[]
+    info[chaplin]=[]
 
     info[aspire_mag_echo_GRE] = []
     info[aspire_phase_echo_GRE] = []
@@ -49,10 +55,19 @@ def infotodict(seqinfo):
         elif ('Humour' in (s.series_description).strip()):
             info[humour].append({'item': s.series_id})
                     
-        elif ('Seinfeld' in (s.series_description).strip()):
-            info[seinfeld].append({'item': s.series_id})   
+        elif ('SeinfeldE1' in (s.series_description).strip()):
+            info[seinfelde1].append({'item': s.series_id})
+
+        elif ('SeinfeldE2' in (s.series_description).strip()):
+            info[seinfelde2].append({'item': s.series_id})    
 
         elif ('Hitchcock' in (s.series_description).strip()):
-            info[hitchcock].append({'item': s.series_id})       
+            info[hitchcock].append({'item': s.series_id}) 
+
+        elif ('rs' in (s.series_description).strip()):
+            info[rest].append({'item': s.series_id})  
+
+        elif ('Chaplain' in (s.series_description).strip()):
+            info[chaplin].append({'item': s.series_id})      
 
     return info
