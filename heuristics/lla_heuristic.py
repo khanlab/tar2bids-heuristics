@@ -62,7 +62,7 @@ def infotodict(seqinfo):
                 elif (s.dim4>300):
                     info[imaginedRtKnee].append({'item': s.series_id})
              
-        elif ('ImaginedLtKnee' in (s.series_description).strip()):
+        elif ('ImagindLtKnee' in (s.series_description).strip()):
                 if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
                     info[imaginedLtKnee_sbref].append({'item': s.series_id})
                 elif (s.dim4>300):
