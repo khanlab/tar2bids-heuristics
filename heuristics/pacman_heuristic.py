@@ -17,7 +17,7 @@ def infotodict(seqinfo):
 
     rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
     task = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-task_run-{item:02d}_bold')
-    replay = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-replay_run-{item:02d}_bold')
+    #replay = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-replay_run-{item:02d}_bold')
     replaypassive = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-replaypassive_run-{item:02d}_bold')
     replayactive = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-replayactive_run-{item:02d}_bold')
 
@@ -26,26 +26,26 @@ def infotodict(seqinfo):
 
     info[rest]=[]
     info[task]=[]
-    info[replay]=[]
+    #info[replay]=[]
     info[replaypassive]=[]
     info[replayactive]=[]
     #info[task_PA]=[]
 
     for idx, s in enumerate(seqinfo):
        
-        if ('task' in (s.series_description).strip()) and (s.dim4>1):
+        if ('task' in (s.series_description).strip()) and (s.dim4>100):
             info[task].append({'item': s.series_id})
                     
-        elif ('replay' in (s.series_description).strip()) and (s.dim4>1):
-            info[replay].append({'item': s.series_id})   
+        #elif ('replay' in (s.series_description).strip()) and (s.dim4>1):
+        #    info[replay].append({'item': s.series_id})   
 
-        elif ('active' in (s.series_description).strip()) and (s.dim4>1):
+        elif ('active' in (s.series_description).strip()) and (s.dim4>100):
             info[replayactive].append({'item': s.series_id}) 
 
-        elif ('passive' in (s.series_description).strip()) and (s.dim4>1):
+        elif ('passive' in (s.series_description).strip()) and (s.dim4>100):
             info[replaypassive].append({'item': s.series_id})          
         
-        elif ('rest' in (s.series_description).strip()) and (s.dim4>1):
+        elif ('rest' in (s.series_description).strip()) and (s.dim4>100):
             info[rest].append({'item': s.series_id})
 
         #elif ('PA' in (s.series_description).strip()):
