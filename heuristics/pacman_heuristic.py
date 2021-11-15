@@ -39,10 +39,10 @@ def infotodict(seqinfo):
         elif ('replay' in (s.series_description).strip()) and (s.dim4>1):
             info[replay].append({'item': s.series_id})   
 
-        elif ('replay_active' in (s.series_description).strip()) and (s.dim4>1):
+        elif ('active' in (s.series_description).strip()) and (s.dim4>1):
             info[replayactive].append({'item': s.series_id}) 
 
-        elif ('replay_passive' in (s.series_description).strip()) and (s.dim4>1):
+        elif ('passive' in (s.series_description).strip()) and (s.dim4>1):
             info[replaypassive].append({'item': s.series_id})          
         
         elif ('rest' in (s.series_description).strip()) and (s.dim4>1):
