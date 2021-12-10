@@ -32,14 +32,14 @@ def infotodict(seqinfo):
 
     
 
-    info[rest]=[]
-    info[rest_sbref]=[]
-    info[movie]=[]
-    info[movie_sbref]=[]
-    info[cuereactivity]=[]
-    info[cuereactivity_sbref]=[]
-    info[green]=[]
-    info[green_sbref]=[]
+    info[perception]=[]
+    info[perception_sbref]=[]
+    info[localizer]=[]
+    info[localizer_sbref]=[]
+    info[visual]=[]
+    info[visual_sbref]=[]
+    info[auditory]=[]
+    info[auditory_sbref]=[]
     #info[fmap]=[]
     info[fmap_sbref]=[]
 
