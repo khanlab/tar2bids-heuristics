@@ -27,7 +27,6 @@ def infotodict(seqinfo):
     auditory = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-auditoryimagery_run-{item:02d}_bold')
     auditory_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-auditoryimagery_run-{item:02d}_sbref')
 
-    #fmap = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_dir-{dir}_epi')
     fmap_sbref = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_dir-{dir}_epi')
 
     
@@ -40,42 +39,38 @@ def infotodict(seqinfo):
     info[visual_sbref]=[]
     info[auditory]=[]
     info[auditory_sbref]=[]
-    #info[fmap]=[]
     info[fmap_sbref]=[]
 
     for idx, s in enumerate(seqinfo):
        
         if ('perception' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
-                    info[movie_sbref].append({'item': s.series_id})
+                    info[perception_sbref].append({'item': s.series_id})
             elif (s.dim4==370):
-                    info[movie].append({'item': s.series_id})
+                    info[perception].append({'item': s.series_id})
                     
         elif ('loc' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
-                    info[movie_sbref].append({'item': s.series_id})
+                    info[localizer_sbref].append({'item': s.series_id})
             elif (s.dim4==434):
-                    info[movie].append({'item': s.series_id})            
+                    info[localizer].append({'item': s.series_id})            
         
         elif ('visual' in (s.series_description).strip()):
             if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
-                    info[cuereactivity_sbref].append({'item': s.series_id})
+                    info[visual_sbref].append({'item': s.series_id})
             elif (s.dim4>199):
-                    info[cuereactivity].append({'item': s.series_id})
+                    info[visual].append({'item': s.series_id})
 
         elif ('auditory' in (s.series_description).strip()):
             if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
-                    info[green_sbref].append({'item': s.series_id})
+                    info[auditory_sbref].append({'item': s.series_id})
             elif (s.dim4>75):
-                    info[green].append({'item': s.series_id})
+                    info[auditory].append({'item': s.series_id})
         
-        elif ('bold' in (s.series_description).strip()):
-            if ('topup' in (s.series_description).strip()):
-                if (s.dim4==1):
-                    if 'SBRef' in (s.series_description).strip():
-                        info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
- #                   else:
- #                       info[fmap].append({'item': s.series_id,'dir': 'PA'})
+        elif ('topup' in (s.series_description).strip()):
+            if (s.dim4==1):
+                if 'SBRef' in (s.series_description).strip():
+                    info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
 
 
     return info
