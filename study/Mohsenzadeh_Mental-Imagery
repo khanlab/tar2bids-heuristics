@@ -7,7 +7,7 @@ SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/mentalimagery_heuristic.py
 
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
-#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
 
 GLOBUS_BIDS_ENDPOINT=
 EMAIL_NOTIFICATION=switt4@uwo.ca,yhu584@uwo.ca
