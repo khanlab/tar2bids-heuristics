@@ -43,7 +43,7 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
        
-        if ('perception' in (s.series_description).strip()):
+        if ('Perception' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
                     info[perception_sbref].append({'item': s.series_id})
             elif (s.dim4==370):
@@ -55,13 +55,13 @@ def infotodict(seqinfo):
             elif (s.dim4==434):
                     info[localizer].append({'item': s.series_id})            
         
-        elif ('visual' in (s.series_description).strip()):
+        elif ('Visual' in (s.series_description).strip()):
             if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
                     info[visual_sbref].append({'item': s.series_id})
             elif (s.dim4>199):
                     info[visual].append({'item': s.series_id})
 
-        elif ('auditory' in (s.series_description).strip()):
+        elif ('Auditory' in (s.series_description).strip()):
             if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
                     info[auditory_sbref].append({'item': s.series_id})
             elif (s.dim4>75):
