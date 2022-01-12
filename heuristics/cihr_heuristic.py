@@ -15,6 +15,7 @@ def infotodict(seqinfo):
     # call cfmm for general labelling and get dictionary
     #info = cfmminfodict(seqinfo)
 
+    # BOLD
     humour = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-humour_run-{item:02d}_bold')
     seinfelde1 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-seinfeldE1_run-{item:02d}_bold')
     seinfelde2 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-seinfeldE2_run-{item:02d}_bold')
@@ -22,11 +23,13 @@ def infotodict(seqinfo):
     rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
     chaplin = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-chaplin_run-{item:02d}_bold')
 
+    # ASPIRE
     aspire_mag_echo_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_part-mag_echo_GRE')
     aspire_phase_echo_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_part-phase_echo_GRE')
     aspire_T2_star_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_T2star')
     aspire_R2_star_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_R2star')
 
+    # T1w and T2w
     t1w = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRvNav4eRMS_run-{item}_T1w')
     t1w_me = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRvNav4e_run-{item}_echo_MEMPRAGE')
     t1w_norm = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRvNavNorm4eRMS_run-{item}_T1w')
@@ -37,14 +40,21 @@ def infotodict(seqinfo):
     t2w_norm = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-SPCvNavNormRMS_run-{item}_T2w')
     t2w_vnavs = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-SPCvNav_run-{item}_vNav')
 
-
     t1w_basic = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRAGE_run-{item}_T1w')
     t2w_basic = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-SPACE_run-{item}_T2w')
+
+    #Diffusion
+    dwi = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_run-{item:02d}_dwi')
+
+    #GRE phase diff 
+    fmap_diff = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_phasediff')
+    fmap_magnitude = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_magnitude')
 
     info = {humour:[],seinfelde1:[],seinfelde2:[],hitchcock:[],rest:[],chaplin:[],
         aspire_mag_echo_GRE:[],aspire_phase_echo_GRE:[],aspire_T2_star_GRE:[],
         aspire_R2_star_GRE:[],t1w_me:[],t1w_me_norm:[],t1w_vnavs:[],t1w:[],
-        t1w_norm:[],t2w_vnavs:[],t2w:[],t2w_norm:[],t1w_basic:[],t2w_basic:[]}
+        t1w_norm:[],t2w_vnavs:[],t2w:[],t2w_norm:[],t1w_basic:[],t2w_basic:[],
+        dwi:[],fmap_diff:[],fmap_magnitude:[]}
 
     for idx, s in enumerate(seqinfo):
 
@@ -96,7 +106,25 @@ def infotodict(seqinfo):
             else:
                 info[t2w].append({'item': s.series_id}) 
         elif ('T2w_SPC' in s.series_description):
-            info[t2w_basic].append({'item': s.series_id})           
+            info[t2w_basic].append({'item': s.series_id}) 
+
+        #dwi
+        if len(s.image_type) > 2 :
+            if (('DIFFUSION' in s.image_type[2].strip()) and ('ORIGINAL' in s.image_type[0].strip())):
+                if ('cb_ep2d_diff_C26' in s.series_description):
+                    info[dwi_ogse].append({'item': s.series_id})
+                elif ('UFA' in s.series_description ):
+                    info[dwi_ufa].append({'item': s.series_id})
+                else:
+                    info[dwi].append({'item': s.series_id})
+
+        #gre field map   
+        if ('field_mapping' in s.protocol_name):   
+            if (s.dim4 == 1) and ('gre_field_mapping' == (s.series_description).strip()):
+                if('P' in (s.image_type[2].strip()) ):
+                    info[fmap_diff].append({'item': s.series_id})
+                if('M' in (s.image_type[2].strip()) ):
+                    info[fmap_magnitude].append({'item': s.series_id})          
 
         if ('Humour' in (s.series_description).strip()):
             info[humour].append({'item': s.series_id})
