@@ -27,6 +27,20 @@ def infotodict(seqinfo):
     aspire_T2_star_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_T2star')
     aspire_R2_star_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_R2star')
 
+    t1w = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRvNav4eRMS_run-{item}_T1w')
+    t1w_me = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRvNav4e_run-{item}_echo_MEMPRAGE')
+    t1w_norm = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRvNavNorm4eRMS_run-{item}_T1w')
+    t1w_me_norm = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRvNavNorm4e_run-{item}_echo_MEMPRAGE')
+    t1w_vnavs = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRvNav_run-{item}_vNav')
+
+    t2w = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-SPCvNavRMS_run-{item}_T2w')
+    t2w_norm = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-SPCvNavNormRMS_run-{item}_T2w')
+    t2w_vnavs = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-SPCvNav_run-{item}_vNav')
+
+
+    t1w_basic = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRAGE_run-{item}_T1w')
+    t2w_basic = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-SPACE_run-{item}_T2w')
+
     info[humour]=[]
     info[seinfelde1]=[]
     info[seinfelde2]=[]
@@ -39,8 +53,20 @@ def infotodict(seqinfo):
     info[aspire_T2_star_GRE] = []
     info[aspire_R2_star_GRE] = []
 
+    t1w_me = []
+    t1w_me_norm = []
+    t1w_vnavs = []
+    t1w = []
+    t1w_norm = []
+    t2w_vnavs = []
+    t2w = []
+    t2w_norm = []
+    t1w_basic = []
+    t2w_basic = []
+
     for idx, s in enumerate(seqinfo):
 
+        # ASPIRE 3T images
         if ('ASPIRE' in (s.series_description).strip()):
             if ('R2star' in (s.series_description).strip()):
                 info[aspire_R2_star_GRE].append({'item': s.series_id})
@@ -50,24 +76,62 @@ def infotodict(seqinfo):
                 if (('M' in (s.image_type[2].strip())) and ('ASPIRE' not in s.image_type)):
                     info[aspire_mag_echo_GRE].append({'item': s.series_id})
                 if ('P' in (s.image_type[2].strip()) and len(s.image_type) > 4):
-                    info[aspire_phase_echo_GRE].append({'item': s.series_id})            
+                    info[aspire_phase_echo_GRE].append({'item': s.series_id}) 
 
-        elif ('Humour' in (s.series_description).strip()):
+        # T1w images
+        if 'T1w_MPR' in s.series_description:
+            if 'vNav' in s.series_description:
+                if 'setter' in s.series_description:
+                    if 'MOSAIC' in s.image_type:
+                        info[t1w_vnavs].append({'item': s.series_id})
+                else:
+                    if 'OTHER' in s.image_type: 
+                        if 'NORM' in s.image_type:
+                            print('skipping pre-scan norm RMS combined T1w')
+                            #info[t1w_norm].append({'item': s.series_id})
+                        else:
+                            print('skipping no pre-scan norm RMS combined T1w')
+                            #info[t1w].append({'item': s.series_id})
+                    if 'M' in s.image_type: 
+                        if 'NORM' in s.image_type:
+                            print('skipping pre-scan norm separated echo T1w')
+                            #info[t1w_me_norm].append({'item': s.series_id})
+                        else:
+                            info[t1w_me].append({'item': s.series_id})
+                        
+            else:
+                info[t1w_basic].append({'item': s.series_id})
+
+
+        #T2w images
+        if 'T2w_SPC_vNav_setter' in s.series_description:
+            if 'MOSAIC' in s.image_type:
+                info[t2w_vnavs].append({'item': s.series_id})
+        elif ('T2w_SPC_800iso_vNav' in s.series_description):
+            if 'NORM' in s.image_type:
+                print('skipping pre-scan norm T2w')
+#                info[t2w_norm].append({'item': s.series_id}) 
+            else:
+                info[t2w].append({'item': s.series_id}) 
+        elif ('T2w_SPC' in s.series_description):
+            info[t2w_basic].append({'item': s.series_id})           
+
+        if ('Humour' in (s.series_description).strip()):
             info[humour].append({'item': s.series_id})
                     
-        elif ('SeinfeldE1' in (s.series_description).strip()):
+        if ('SeinfeldE1' in (s.series_description).strip()):
             info[seinfelde1].append({'item': s.series_id})
 
-        elif ('SeinfeldE2' in (s.series_description).strip()):
+        if ('SeinfeldE2' in (s.series_description).strip()):
             info[seinfelde2].append({'item': s.series_id})    
 
-        elif ('Hitchcock' in (s.series_description).strip()):
+        if ('Hitchcock' in (s.series_description).strip()):
             info[hitchcock].append({'item': s.series_id}) 
 
-        elif ('rs' in (s.series_description).strip()):
+        if ('rs' in (s.series_description).strip()):
             info[rest].append({'item': s.series_id})  
 
-        elif ('Chaplain' in (s.series_description).strip()):
+        if ('Chaplain' in (s.series_description).strip()):
             info[chaplin].append({'item': s.series_id})      
 
     return info
