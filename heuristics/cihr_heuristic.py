@@ -53,16 +53,16 @@ def infotodict(seqinfo):
     info[aspire_T2_star_GRE] = []
     info[aspire_R2_star_GRE] = []
 
-    t1w_me = []
-    t1w_me_norm = []
-    t1w_vnavs = []
-    t1w = []
-    t1w_norm = []
-    t2w_vnavs = []
-    t2w = []
-    t2w_norm = []
-    t1w_basic = []
-    t2w_basic = []
+    info[t1w_me] = []
+    info[t1w_me_norm] = []
+    info[t1w_vnavs] = []
+    info[t1w] = []
+    info[t1w_norm] = []
+    info[t2w_vnavs] = []
+    info[t2w] = []
+    info[t2w_norm] = []
+    info[t1w_basic] = []
+    info[t2w_basic] = []
 
     for idx, s in enumerate(seqinfo):
 
