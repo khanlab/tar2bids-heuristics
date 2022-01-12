@@ -13,7 +13,7 @@ def infotodict(seqinfo):
     """
 
     # call cfmm for general labelling and get dictionary
-    info = cfmminfodict(seqinfo)
+    #info = cfmminfodict(seqinfo)
 
     humour = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-humour_run-{item:02d}_bold')
     seinfelde1 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-seinfeldE1_run-{item:02d}_bold')
@@ -41,28 +41,10 @@ def infotodict(seqinfo):
     t1w_basic = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRAGE_run-{item}_T1w')
     t2w_basic = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-SPACE_run-{item}_T2w')
 
-    info[humour]=[]
-    info[seinfelde1]=[]
-    info[seinfelde2]=[]
-    info[hitchcock]=[]
-    info[rest]=[]
-    info[chaplin]=[]
-
-    info[aspire_mag_echo_GRE] = []
-    info[aspire_phase_echo_GRE] = []
-    info[aspire_T2_star_GRE] = []
-    info[aspire_R2_star_GRE] = []
-
-    info[t1w_me] = []
-    info[t1w_me_norm] = []
-    info[t1w_vnavs] = []
-    info[t1w] = []
-    info[t1w_norm] = []
-    info[t2w_vnavs] = []
-    info[t2w] = []
-    info[t2w_norm] = []
-    info[t1w_basic] = []
-    info[t2w_basic] = []
+    info = {humour:[],seinfelde1:[],seinfelde2:[],hitchcock:[],rest:[],chaplin:[],
+        aspire_mag_echo_GRE:[],aspire_phase_echo_GRE:[],aspire_T2_star_GRE:[],
+        aspire_R2_star_GRE:[],t1w_me:[],t1w_me_norm:[],t1w_vnavs:[],t1w:[],
+        t1w_norm:[],t2w_vnavs:[],t2w:[],t2w_norm:[],t1w_basic:[],t2w_basic:[]}
 
     for idx, s in enumerate(seqinfo):
 
