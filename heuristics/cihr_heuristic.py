@@ -82,18 +82,18 @@ def infotodict(seqinfo):
         if ('T1w_MPR' in (s.series_description).strip()):
             if ('vNav' in (s.series_description).strip()):
                 if ('setter' in (s.series_description).strip()):
-                    if ('MOSAIC' in (s.image_type).strip()):
+                    if ('MOSAIC' in s.image_type):
                         info[t1w_vnavs].append({'item': s.series_id})
                 else:
                     if ('OTHER' in (s.image_type).strip()): 
-                        if ('NORM' in (s.image_type).strip()):
+                        if ('NORM' in s.image_type):
                             print('skipping pre-scan norm RMS combined T1w')
                             #info[t1w_norm].append({'item': s.series_id})
                         else:
                             print('skipping no pre-scan norm RMS combined T1w')
                             #info[t1w].append({'item': s.series_id})
                     if ('M' in (s.image_type).strip()): 
-                        if ('NORM' in (s.image_type).strip()):
+                        if ('NORM' in s.image_type):
                             print('skipping pre-scan norm separated echo T1w')
                             #info[t1w_me_norm].append({'item': s.series_id})
                         else:
@@ -105,10 +105,10 @@ def infotodict(seqinfo):
 
         #T2w images
         if ('T2w_SPC_vNav_setter' in s.series_description):
-            if ('MOSAIC' in (s.image_type.strip()):
+            if ('MOSAIC' in s.image_type):
                 info[t2w_vnavs].append({'item': s.series_id})
         elif ('T2w_SPC_800iso_vNav' in s.series_description):
-            if ('NORM' in (s.image_type).strip()):
+            if ('NORM' in s.image_type):
                 print('skipping pre-scan norm T2w')
 #                info[t2w_norm].append({'item': s.series_id}) 
             else:
