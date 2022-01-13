@@ -77,7 +77,7 @@ def infotodict(seqinfo):
                     if ('MOSAIC' in s.image_type):
                         info[t1w_vnavs].append({'item': s.series_id})
                 else:
-                    if ('OTHER' in (s.image_type).strip()): 
+                    if ('OTHER' in s.image_type): 
                         if ('NORM' in s.image_type):
                             print('skipping pre-scan norm RMS combined T1w')
                             #info[t1w_norm].append({'item': s.series_id})
