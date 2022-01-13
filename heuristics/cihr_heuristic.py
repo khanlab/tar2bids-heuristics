@@ -84,7 +84,7 @@ def infotodict(seqinfo):
                         else:
                             print('skipping no pre-scan norm RMS combined T1w')
                             #info[t1w].append({'item': s.series_id})
-                    if ('M' in (s.image_type).strip()): 
+                    if ('M' in s.image_type)): 
                         if ('NORM' in s.image_type):
                             print('skipping pre-scan norm separated echo T1w')
                             #info[t1w_me_norm].append({'item': s.series_id})
