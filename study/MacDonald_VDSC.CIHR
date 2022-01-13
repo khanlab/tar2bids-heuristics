@@ -5,7 +5,8 @@ SUBJ_EXPR=*_[Cc][Ii][Hh][Rr]_{subject}_{session}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/cihr_heuristic.py
 
-TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
+#TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:latest`
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.2
 
 GLOBUS_BIDS_ENDPOINT=1cd34a5b-831d-43b0-a351-0fbf46695f79
