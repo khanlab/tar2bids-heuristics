@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SUBJ_EXPR=*_{subject}_{session}  #search string for patientname
-BIDS_DIR=/project/6007967/akhanf/cfmm-bids/data/Kohler/HcECT/bids
+BIDS_DIR=/project/6050199/akhanf/cfmm-bids/data/Kohler/HcECT/bids
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/Kohler_HcECT.py
 
