@@ -1,7 +1,7 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Mohsenzadeh/Mental_Imagery/bids
-#BIDS_DIR=/project/6037638/cfmm-bids/Mohsenzadeh/Mental_Imagery/bids
+#BIDS_DIR=$AUTOBIDS_DATA/Mohsenzadeh/Mental_Imagery/bids
+BIDS_DIR=/project/6059441/cfmm-bids/Mohsenzadeh/Mental_Imagery/bids
 SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/mentalimagery_heuristic.py
