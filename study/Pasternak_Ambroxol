@@ -8,5 +8,5 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/ambroxol_heuristic.py
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.2
 
-GLOBUS_BIDS_ENDPOINT=
+GLOBUS_BIDS_ENDPOINT=45993c76-7553-44f1-b776-602801d94157
 EMAIL_NOTIFICATION=switt4@uwo.ca,mprenger@uwo.ca,alushaje@gmail.com
