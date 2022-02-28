@@ -16,18 +16,18 @@ def infotodict(seqinfo):
     #info = cfmminfodict(seqinfo)
 
     # BOLD
-    humour = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-humour_run-{item:02d}_bold')
-    seinfelde1 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-seinfeldE1_run-{item:02d}_bold')
-    seinfelde2 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-seinfeldE2_run-{item:02d}_bold')
-    hitchcock = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-hitchcock_run-{item:02d}_bold')
-    rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
-    chaplin = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-chaplin_run-{item:02d}_bold')
+    #humour = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-humour_run-{item:02d}_bold')
+    #seinfelde1 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-seinfeldE1_run-{item:02d}_bold')
+    #seinfelde2 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-seinfeldE2_run-{item:02d}_bold')
+    #hitchcock = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-hitchcock_run-{item:02d}_bold')
+    #rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
+    #chaplin = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-chaplin_run-{item:02d}_bold')
 
     # ASPIRE
-    aspire_mag_echo_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_part-mag_echo_GRE')
-    aspire_phase_echo_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_part-phase_echo_GRE')
-    aspire_T2_star_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_T2star')
-    aspire_R2_star_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_R2star')
+    aspire_mag_echo_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_run-{item}_part-mag_echo_GRE')
+    aspire_phase_echo_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_run-{item}_part-phase_echo_GRE')
+    aspire_T2_star_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_run-{item}_T2star')
+    aspire_R2_star_GRE = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-ASPIRE_run-{item}_R2star')
 
     # T1w and T2w
     t1w = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRvNav4eRMS_run-{item}_T1w')
@@ -50,8 +50,13 @@ def infotodict(seqinfo):
     fmap_diff = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_phasediff')
     fmap_magnitude = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_magnitude')
 
-    info = {humour:[],seinfelde1:[],seinfelde2:[],hitchcock:[],rest:[],chaplin:[],
-        aspire_mag_echo_GRE:[],aspire_phase_echo_GRE:[],aspire_T2_star_GRE:[],
+    #info = {humour:[],seinfelde1:[],seinfelde2:[],hitchcock:[],rest:[],chaplin:[],
+    #    aspire_mag_echo_GRE:[],aspire_phase_echo_GRE:[],aspire_T2_star_GRE:[],
+    #    aspire_R2_star_GRE:[],t1w_me:[],t1w_me_norm:[],t1w_vnavs:[],t1w:[],
+    #    t1w_norm:[],t2w_vnavs:[],t2w:[],t2w_norm:[],t1w_basic:[],t2w_basic:[],
+    #    dwi:[],fmap_diff:[],fmap_magnitude:[]}
+
+    info = {aspire_mag_echo_GRE:[],aspire_phase_echo_GRE:[],aspire_T2_star_GRE:[],
         aspire_R2_star_GRE:[],t1w_me:[],t1w_me_norm:[],t1w_vnavs:[],t1w:[],
         t1w_norm:[],t2w_vnavs:[],t2w:[],t2w_norm:[],t1w_basic:[],t2w_basic:[],
         dwi:[],fmap_diff:[],fmap_magnitude:[]}
@@ -126,22 +131,22 @@ def infotodict(seqinfo):
                 if('M' in (s.image_type[2].strip()) ):
                     info[fmap_magnitude].append({'item': s.series_id})          
 
-        if ('Humour' in (s.series_description).strip()):
-            info[humour].append({'item': s.series_id})
+        #if ('Humour' in (s.series_description).strip()):
+        #    info[humour].append({'item': s.series_id})
                     
-        if ('SeinfeldE1' in (s.series_description).strip()):
-            info[seinfelde1].append({'item': s.series_id})
+        #if ('SeinfeldE1' in (s.series_description).strip()):
+        #    info[seinfelde1].append({'item': s.series_id})
 
-        if ('SeinfeldE2' in (s.series_description).strip()):
-            info[seinfelde2].append({'item': s.series_id})    
+        #if ('SeinfeldE2' in (s.series_description).strip()):
+        #    info[seinfelde2].append({'item': s.series_id})    
 
-        if ('Hitchcock' in (s.series_description).strip()):
-            info[hitchcock].append({'item': s.series_id}) 
+        #if ('Hitchcock' in (s.series_description).strip()):
+        #    info[hitchcock].append({'item': s.series_id}) 
 
-        if ('rs' in (s.series_description).strip()):
-            info[rest].append({'item': s.series_id})  
+        #if ('rs' in (s.series_description).strip()):
+        #    info[rest].append({'item': s.series_id})  
 
-        if ('Chaplain' in (s.series_description).strip()):
-            info[chaplin].append({'item': s.series_id})      
+        #if ('Chaplain' in (s.series_description).strip()):
+        #    info[chaplin].append({'item': s.series_id})      
 
     return info
