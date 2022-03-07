@@ -18,6 +18,9 @@ def infotodict(seqinfo):
     task = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-task_run-{item:02d}_bold')
     task_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-task_run-{item:02d}_sbref')
 
+    wholebrain = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-wholebrain_run-{item:02d}_bold')
+    wholebrain_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-wholebrain_run-{item:02d}_sbref')
+
     t2_space = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-SPACE_run-{item:02d}_T2w')
     
     gre_diff = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_run-{item:02d}_phasediff')
@@ -30,6 +33,8 @@ def infotodict(seqinfo):
 
     info[task]=[]
     info[task_sbref]=[]
+    info[wholebrain]=[]
+    info[wholebrain_sbref]=[]
     info[gre_diff]=[]
     info[gre_magnitude]=[]
     info[t2_space] = []
@@ -42,6 +47,12 @@ def infotodict(seqinfo):
                 info[task_sbref].append({'item': s.series_id})
             elif (s.dim4==328):
                 info[task].append({'item': s.series_id})
+
+        elif ('WholeBrain' in (s.series_description).strip()):
+            if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
+                info[wholebrain_sbref].append({'item': s.series_id})
+            elif (s.dim4==5):
+                info[wholebrain].append({'item': s.series_id})
                 
         elif ('field_mapping' in s.protocol_name):   
             if (s.dim4==1 and 'gre_field_mapping' in (s.series_description).strip()):
