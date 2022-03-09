@@ -43,16 +43,16 @@ def infotodict(seqinfo):
     for idx, s in enumerate(seqinfo):
        
         if ('bold' in (s.series_description).strip()):
-            if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
-                info[task_sbref].append({'item': s.series_id})
-            elif (s.dim4==328):
-                info[task].append({'item': s.series_id})
-
-        elif ('WholeBrain' in (s.series_description).strip()):
-            if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
-                info[wholebrain_sbref].append({'item': s.series_id})
-            elif (s.dim4==5):
-                info[wholebrain].append({'item': s.series_id})
+            if ('WholeBrain' in (s.series_description).strip()):
+            	if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
+                	info[wholebrain_sbref].append({'item': s.series_id})
+            	elif (s.dim4==5):
+                	info[wholebrain].append({'item': s.series_id})
+            else: 
+            	if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
+                	info[task_sbref].append({'item': s.series_id})
+            	elif (s.dim4==328):
+                	info[task].append({'item': s.series_id})
                 
         elif ('field_mapping' in s.protocol_name):   
             if (s.dim4==1 and 'gre_field_mapping' in (s.series_description).strip()):
