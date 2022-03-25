@@ -22,7 +22,7 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
         
-        if ('T2_spc' in s.protocol_name.strip()):
+        if ('T2_spc_400iso_p2' in s.protocol_name):
             info[t2_space].append({'item': s.series_id})
                     
     return info
