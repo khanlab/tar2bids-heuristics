@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BIDS_DIR=$AUTOBIDS_DATA/Martinez/NHP_3T/bids
-SUBJ_EXPR=*[nN][hH][pP]_3[tT]_{subject}  #search string for patientname
+SUBJ_EXPR=*[nN][hH][pP]_3[tT]_{subject}_{session}  #search string for patientname
 
 #HEURISTIC=cfmm_base.py
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/martinez_nhp_heuristic.py
