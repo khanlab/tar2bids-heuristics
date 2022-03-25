@@ -3,7 +3,8 @@
 BIDS_DIR=$AUTOBIDS_DATA/Martinez/NHP_7T/bids
 SUBJ_EXPR=*[nN][hH][pP]_7[tT]_{subject}  #search string for patientname
 
-HEURISTIC=cfmm_base.py
+#HEURISTIC=cfmm_base.py
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/martinez_nhp_heuristic.py
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5b`
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/mriqc
