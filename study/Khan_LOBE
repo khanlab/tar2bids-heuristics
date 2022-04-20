@@ -10,7 +10,7 @@ HEURISTIC=LOBE_HCPLS.py
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T
 
-GLOBUS_BIDS_ENDPOINT=
+GLOBUS_BIDS_ENDPOINT=61795447-2edd-4f8d-bb75-b018fd8a8d6f
 EMAIL_NOTIFICATION=alik@robarts.ca,mtayl84@uwo.ca
 
-TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:latest` #update this to a release when finalized
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.6b` 
