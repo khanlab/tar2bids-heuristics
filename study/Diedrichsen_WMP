@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BIDS_DIR=$AUTOBIDS_DATA/Diedrichsen/WMP/bids
+SUBJ_EXPR=*_{subject}  #search string in patient_name
+
+HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/wmp_heuristic.py
+
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5h`
+POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/correct7T.v0.3
+
+GLOBUS_BIDS_ENDPOINT=30741e8a-e1fb-4b3e-b636-bee6a2d04792
+EMAIL_NOTIFICATION=switt4@uwo.ca,mshahba9@uwo.ca
