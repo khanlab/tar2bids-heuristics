@@ -46,13 +46,13 @@ def infotodict(seqinfo):
         if ('Perception' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
                     info[perception_sbref].append({'item': s.series_id})
-            elif (s.dim4==370):
+            elif (s.dim4>300):
                     info[perception].append({'item': s.series_id})
                     
         elif ('loc' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
                     info[localizer_sbref].append({'item': s.series_id})
-            elif (s.dim4==434):
+            elif (s.dim4>300):
                     info[localizer].append({'item': s.series_id})            
         
         elif ('Visual' in (s.series_description).strip()):
