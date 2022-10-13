@@ -52,7 +52,7 @@ def infotodict(seqinfo):
             elif (s.dim4>300):
                     info[perception].append({'item': s.series_id})
                     
-        elif ('loc' in (s.series_description).strip()):
+        elif ('loc' or 'Loc' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
                     info[localizer_sbref].append({'item': s.series_id})
             elif (s.dim4>300):
