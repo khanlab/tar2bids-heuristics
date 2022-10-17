@@ -72,8 +72,8 @@ def infotodict(seqinfo):
         
         elif ('Topup' in (s.series_description).strip()):
             if (s.dim4==1):
-                if 'SBRef' in (s.series_description).strip():
-                    info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
+                #if 'SBRef' in (s.series_description).strip():
+                info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
 
         elif ('T1_3D' in (s.series_description).strip()):
             info[t13d].append({'item': s.series_id})        
