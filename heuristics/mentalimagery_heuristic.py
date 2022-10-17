@@ -70,7 +70,7 @@ def infotodict(seqinfo):
             elif (s.dim4>75):
                     info[auditory].append({'item': s.series_id})
         
-        elif ('topup' in (s.series_description).strip()):
+        elif ('topup' or 'Topup' in (s.series_description).strip()):
             if (s.dim4==1):
                 if 'SBRef' in (s.series_description).strip():
                     info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
