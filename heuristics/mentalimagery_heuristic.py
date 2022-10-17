@@ -52,25 +52,25 @@ def infotodict(seqinfo):
             elif (s.dim4>300):
                     info[perception].append({'item': s.series_id})
                     
-        elif ('loc' or 'Loc' in (s.series_description).strip()):
+        elif ('Loc' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
                     info[localizer_sbref].append({'item': s.series_id})
             elif (s.dim4>300):
                     info[localizer].append({'item': s.series_id})            
         
-        elif ('Visual' in (s.series_description).strip()):
+        elif ('VisualImagery' in (s.series_description).strip()):
             if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
                     info[visual_sbref].append({'item': s.series_id})
             elif (s.dim4>199):
                     info[visual].append({'item': s.series_id})
 
-        elif ('Auditory' in (s.series_description).strip()):
+        elif ('AuditoryImagery' in (s.series_description).strip()):
             if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
                     info[auditory_sbref].append({'item': s.series_id})
             elif (s.dim4>75):
                     info[auditory].append({'item': s.series_id})
         
-        elif ('topup' or 'Topup' in (s.series_description).strip()):
+        elif ('Topup' in (s.series_description).strip()):
             if (s.dim4==1):
                 if 'SBRef' in (s.series_description).strip():
                     info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
