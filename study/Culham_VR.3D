@@ -5,8 +5,8 @@ SUBJ_EXPR=*_[3][Dd]{subject}  #search string in patient_name
 
 HEURISTIC="$AUTOBIDS_STUDY_CFG_DIR/../heuristics/faces_heuristic.py -D"
 
-POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.2
+#POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.2
 
-#GLOBUS_BIDS_ENDPOINT=791b68de-1b14-412d-8ced-85dbdf4fb6a6
+GLOBUS_BIDS_ENDPOINT=791b68de-1b14-412d-8ced-85dbdf4fb6a6
 EMAIL_NOTIFICATION=switt4@uwo.ca,edeligia@uwo.ca
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
