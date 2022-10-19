@@ -32,7 +32,7 @@ def infotodict(seqinfo):
             info[faces].append({'item': s.series_id})
                     
         elif ('localizer' in (s.series_description).strip()) and (s.dim4>1):
-            if ('Depth' in (s.series_description).strip()):
+            if ('depth' in (s.series_description).strip()):
                 info[depth].append({'item': s.series_id})
             elif ('FOPSR' in (s.series_description).strip()):
                 info[fopsr].append({'item': s.series_id})
