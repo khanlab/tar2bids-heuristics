@@ -43,21 +43,21 @@ def infotodict(seqinfo):
        
         if ('matrix' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
-                    info[perception_sbref].append({'item': s.series_id})
+                    info[matrix_sbref].append({'item': s.series_id})
             elif (s.dim4>100):
-                    info[perception].append({'item': s.series_id})
+                    info[matrix].append({'item': s.series_id})
                     
         elif ('endback' in (s.series_description).strip()):
             if (s.dim4==1 and  'SBRef' in (s.series_description).strip()):
-                    info[localizer_sbref].append({'item': s.series_id})
+                    info[endback_sbref].append({'item': s.series_id})
             elif (s.dim4>100):
-                    info[localizer].append({'item': s.series_id})            
+                    info[endback].append({'item': s.series_id})            
         
         elif ('rest' in (s.series_description).strip()):
             if (s.dim4==1 and 'SBRef' in (s.series_description).strip()):
-                    info[visual_sbref].append({'item': s.series_id})
+                    info[rest_sbref].append({'item': s.series_id})
             elif (s.dim4>100):
-                    info[visual].append({'item': s.series_id})
+                    info[rest].append({'item': s.series_id})
         
         elif ('PA' in (s.series_description).strip()):
             if (s.dim4==1):
