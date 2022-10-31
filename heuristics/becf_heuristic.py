@@ -59,7 +59,7 @@ def infotodict(seqinfo):
             elif (s.dim4>100):
                     info[rest].append({'item': s.series_id})
         
-        elif ('PA' in (s.series_description).strip()):
+        elif ('ep_bold_mb6_PA' in (s.series_description).strip()):
             if (s.dim4==1):
                 #if 'SBRef' in (s.series_description).strip():
                 info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
