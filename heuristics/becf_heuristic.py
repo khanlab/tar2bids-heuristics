@@ -26,6 +26,8 @@ def infotodict(seqinfo):
 
     fmap_sbref = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_dir-{dir}_epi')
 
+    dwi_pa = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_dir-{dir}_run-{item:02}_dwi')
+
     t13d = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRAGE_run-{item:02d}_T1w')
 
     
@@ -37,6 +39,7 @@ def infotodict(seqinfo):
     info[rest]=[]
     info[rest_sbref]=[]
     info[fmap_sbref]=[]
+    info[dwi_pa]=[]
     info[t13d]=[]
 
     for idx, s in enumerate(seqinfo):
@@ -63,6 +66,11 @@ def infotodict(seqinfo):
             if (s.dim4==1):
                 #if 'SBRef' in (s.series_description).strip():
                 info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
+
+        elif ('diff_mb3_b0_PA' in (s.series_description).strip()):
+            if (s.dim4==1):
+                #if 'SBRef' in (s.series_description).strip():
+                info[dwi_pa].append({'item': s.series_id,'dir': 'PA'})
 
         elif ('T1_3D' in (s.series_description).strip()):
             info[t13d].append({'item': s.series_id})        
