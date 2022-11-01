@@ -69,9 +69,10 @@ def infotodict(seqinfo):
                 #if 'SBRef' in (s.series_description).strip():
                 info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
 
-        elif ('diff_mb3_95dir_b2000_AP' in (s.series_description).strip()):
-            if ('FA' not in (s.series_description).strip()):
-                info[dwi_ap].append({'item': s.series_id,'dir': 'AP'})
+        elif (s.series_description == 'diff_mb3_95dir_b2000_AP'):
+        #elif ('diff_mb3_95dir_b2000_AP' in (s.series_description).strip()):
+        #    if ('FA' not in (s.series_description).strip()):
+            info[dwi_ap].append({'item': s.series_id,'dir': 'AP'})
 
         elif ('diff_mb3_b0_PA' in (s.series_description).strip()):
             info[dwi_pa].append({'item': s.series_id,'dir': 'PA'})
