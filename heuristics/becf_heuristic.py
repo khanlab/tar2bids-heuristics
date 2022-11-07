@@ -13,7 +13,7 @@ def infotodict(seqinfo):
     """
 
     # call cfmm for general labelling and get dictionary
-    info = cfmminfodict(seqinfo)
+    #info = cfmminfodict(seqinfo)
 
     matrix = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-matrix_run-{item:02d}_bold')
     matrix_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-matrix_run-{item:02d}_sbref')
@@ -26,23 +26,14 @@ def infotodict(seqinfo):
 
     fmap_sbref = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_dir-{dir}_epi')
 
-    #dwi_ap = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_dir-{dir}_run-{item:02}_dwi')
+    dwi_ap = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_run-{item:02}_dwi')
     dwi_pa = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_dir-{dir}_run-{item:02}_epi')
 
     t13d = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRAGE_run-{item:02d}_T1w')
 
     
-
-    info[matrix]=[]
-    info[matrix_sbref]=[]
-    info[endback]=[]
-    info[endback_sbref]=[]
-    info[rest]=[]
-    info[rest_sbref]=[]
-    info[fmap_sbref]=[]
-    info[dwi_ap]=[]
-    info[dwi_pa]=[]
-    info[t13d]=[]
+    info = {matrix:[], matrix_sbref:[], endback:[], endback_sbref:[], rest:[], rest_sbref:[], fmap_sbref:[],
+                dwi_ap:[], dwi_pa:[], t13d:[]}
 
     for idx, s in enumerate(seqinfo):
        
@@ -69,9 +60,9 @@ def infotodict(seqinfo):
                 #if 'SBRef' in (s.series_description).strip():
                 info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
 
-        #elif ('diff_mb3_95dir_b2000_AP' in (s.series_description).strip()):
-        #    if (s.dim4==96):
-        #        info[dwi_ap].append({'item': s.series_id,'dir': 'AP'})
+        elif ('diff_mb3_95dir_b2000_AP' in (s.series_description).strip()):
+            if (s.dim4==96):
+                info[dwi_ap].append({'item': s.series_id})
 
         elif ('diff_mb3_b0_PA' in (s.series_description).strip()):
             info[dwi_pa].append({'item': s.series_id,'dir': 'PA'})
