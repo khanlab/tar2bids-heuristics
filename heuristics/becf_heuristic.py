@@ -24,7 +24,7 @@ def infotodict(seqinfo):
     rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
     rest_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_sbref')
 
-    fmap_sbref = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_dir-{dir}_epi')
+    fmap_sbref = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_acq-EPI_dir-{dir}_epi')
 
     dwi_ap = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_run-{item:02}_dwi')
     dwi_pa = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_aqc-DWI_epi')
