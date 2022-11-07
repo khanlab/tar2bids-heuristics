@@ -31,9 +31,12 @@ def infotodict(seqinfo):
 
     t13d = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRAGE_run-{item:02d}_T1w')
 
+    fmap_diff = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_phasediff')
+    fmap_magnitude = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_magnitude')
+
     
     info = {matrix:[], matrix_sbref:[], endback:[], endback_sbref:[], rest:[], rest_sbref:[], fmap_sbref:[],
-                dwi_ap:[], dwi_pa:[], t13d:[]}
+                dwi_ap:[], dwi_pa:[], t13d:[], fmap_diff:[], fmap_magnitude:[]}
 
     for idx, s in enumerate(seqinfo):
        
@@ -68,7 +71,14 @@ def infotodict(seqinfo):
             info[dwi_pa].append({'item': s.series_id,'dir': 'PA'})
 
         elif ('T1_3D' in (s.series_description).strip()):
-            info[t13d].append({'item': s.series_id})        
+            info[t13d].append({'item': s.series_id}) 
+
+        elif ('field_mapping' in s.protocol_name):   
+            if (s.dim4 == 1) and ('gre_field_mapping' == (s.series_description).strip()):
+                if('P' in (s.image_type[2].strip()) ):
+                    info[fmap_diff].append({'item': s.series_id})
+                if('M' in (s.image_type[2].strip()) ):
+                    info[fmap_magnitude].append({'item': s.series_id})                 
 
 
     return info
