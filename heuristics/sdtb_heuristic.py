@@ -35,10 +35,9 @@ def infotodict(seqinfo):
 
     fmap_sbref = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_acq-EPI_dir-{dir}_epi')
 
-    #t13d = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRAGE_run-{item:02d}_T1w')
+    se_pa = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_acq-SE_dir-{dir}_epi')
+    se_ap = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_acq-SE_dir-{dir}_epi')
 
-    #fmap_diff = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_phasediff')
-    #fmap_magnitude = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_magnitude')
 
     info[prod1]=[]
     info[prod1_sbref]=[]
@@ -53,6 +52,8 @@ def infotodict(seqinfo):
     info[ntfd2]=[]
     info[ntfd2_sbref]=[]
     info[fmap_sbref]=[]
+    info[se_pa]=[]
+    info[se_ap]=[]
 
 
     for idx, s in enumerate(seqinfo):
@@ -94,9 +95,17 @@ def infotodict(seqinfo):
                     info[ntfd2].append({'item': s.series_id})
         
         elif ('ep_bold_mb3_p2_AP' in (s.series_description).strip()):
+            info[fmap_sbref].append({'item': s.series_id,'dir': 'AP'})    
+
+        elif ('SpinEchoFieldMap_PA' in (s.series_description).strip()):
             if (s.dim4==1):
                 #if 'SBRef' in (s.series_description).strip():
-                info[fmap_sbref].append({'item': s.series_id,'dir': 'AP'})                
+                info[se_pa].append({'item': s.series_id,'dir': 'PA'})
+
+        elif ('SpinEchoFieldMap_AP' in (s.series_description).strip()):
+            if (s.dim4==1):
+                #if 'SBRef' in (s.series_description).strip():
+                info[se_ap].append({'item': s.series_id,'dir': 'AP'})                
 
 
     return info
