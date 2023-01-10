@@ -42,7 +42,7 @@ def infotodict(seqinfo):
             info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'}) 
 
         elif ('ep2d_diff_mb2_p2_64dirs' in (s.series_description).strip()):
-            if (s.dim4>1):
+            if (s.dim4==68):
                 info[dwi_ap].append({'item': s.series_id})
             
         elif ('ep2d_diff_mb2_p2_64dirs_PA' in (s.series_description).strip()):
