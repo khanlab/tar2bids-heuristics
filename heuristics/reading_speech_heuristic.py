@@ -38,15 +38,15 @@ def infotodict(seqinfo):
             elif (s.dim4>10):
                     info[task].append({'item': s.series_id})
         
-        elif ('ep_bold_mb4_PA' in (s.series_description).strip()):
-            info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'}) 
+        elif ('PA' in (s.series_description).strip()):
+            if ('bold' in (s.series_description).strip()):
+                info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
+            elif ('diff' in (s.series_description).strip()):
+                info[dwi_pa].append({'item': s.series_id, 'dir': 'PA'}) 
 
         elif ('ep2d_diff_mb2_p2_64dirs' in (s.series_description).strip()):
             if (s.dim4==68):
                 info[dwi_ap].append({'item': s.series_id})
-            
-        elif ('ep2d_diff_mb2_p2_64dirs_PA' in (s.series_description).strip()):
-            info[dwi_pa].append({'item': s.series_id,'dir': 'PA'})
 
         elif ('MPRAGE' in (s.series_description).strip()):
             info[t13d].append({'item': s.series_id}) 
