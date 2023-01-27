@@ -1,6 +1,7 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Pasternak/Ambroxol/bids
+#BIDS_DIR=$AUTOBIDS_DATA/Pasternak/Ambroxol/bids
+BIDS_DIR=/project/6033495/cfmm-bids/Pasternak/Ambroxol
 SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/ambroxol_heuristic.py
@@ -8,5 +9,5 @@ HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/ambroxol_heuristic.py
 TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.0.5c`
 POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.2
 
-GLOBUS_BIDS_ENDPOINT=45993c76-7553-44f1-b776-602801d94157
+GLOBUS_BIDS_ENDPOINT=074cd7fa-e677-4ca4-8f8a-2de3083e73e0
 EMAIL_NOTIFICATION=switt4@uwo.ca,mprenger@uwo.ca,alushaje@gmail.com
