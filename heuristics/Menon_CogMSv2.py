@@ -27,7 +27,7 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
         #bold
-	if ('bold' in s.protocol_name):
+    if ('bold' in s.protocol_name):
             if ( s.dim4 > 2 and ('M' in s.image_type[2].strip()) ):
                 info[bold_mag].append({'item': s.series_id})
             if ( s.dim4 > 2 and ('P' in s.image_type[2].strip()) ):
