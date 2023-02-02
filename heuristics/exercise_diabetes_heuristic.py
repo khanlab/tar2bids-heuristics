@@ -110,9 +110,9 @@ def infotodict(seqinfo):
         #dwi
         if ('diff_mb2_95dir_b2000' in s.series_description):
             if (s.dim4 == 96):
-                info[dwi].append({'item': s.series_id},'dir': 'AP')
-            elif (s.dim4 == 7);
-                info[dwi_pa].append({'item': s.series_id},'dir': 'PA')
+                info[dwi].append({'item': s.series_id,'dir': 'AP'})
+            elif (s.dim4 == 7):
+                info[dwi_pa].append({'item': s.series_id,'dir': 'PA'})
 
         #gre field map   
         if ('field_mapping' in s.protocol_name):   
@@ -131,9 +131,9 @@ def infotodict(seqinfo):
                     
         if ('REST_PA' in (s.series_description).strip()):
             if ('SBRef' in (s.series_description).strip()):
-                info[rest_pa_sbref].append({'item': s.series_id},'dir': 'PA')
+                info[rest_pa_sbref].append({'item': s.series_id,'dir': 'PA'})
             else:
-                info[rest_pa].append({'item': s.series_id},'dir': 'PA') 
+                info[rest_pa].append({'item': s.series_id,'dir': 'PA'}) 
 
     return info
 
