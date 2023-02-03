@@ -16,9 +16,9 @@ def infotodict(seqinfo):
     #info = cfmminfodict(seqinfo)
 
     # BOLD
-    rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
-    rest_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_sbref')
-    rest_pa_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_dir-{dir}_sbref')
+    rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_dir-{dir}_run-{item:02d}_bold')
+    rest_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_dir-{dir}_run-{item:02d}_sbref')
+    rest_pa_sbref = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_dir-{dir}_run-{item:02d}_sbref')
     
 
     # ASPIRE
@@ -42,8 +42,8 @@ def infotodict(seqinfo):
     #t2w_basic = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-SPACE_run-{item}_T2w')
 
     #Diffusion
-    dwi = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_run-{item:02d}_dir-{dir}_dwi')
-    dwi_pa = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_run-{item:02d}_dir-{dir}_dwi')
+    dwi = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_dir-{dir}_run-{item:02d}_dwi')
+    dwi_pa = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_dir-{dir}_run-{item:02d}_dwi')
 
     #GRE phase diff 
     fmap_diff = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_phasediff')
@@ -108,7 +108,7 @@ def infotodict(seqinfo):
         #    info[t2w_basic].append({'item': s.series_id}) 
 
         #dwi
-        if ('diff_mb2_95dir_b2000' in s.series_description):
+        if ('diff' in s.series_description):
             if (s.dim4 == 96):
                 info[dwi].append({'item': s.series_id,'dir': 'AP'})
             elif (s.dim4 == 7):
@@ -125,9 +125,9 @@ def infotodict(seqinfo):
         #bold
         if ('REST_AP' in (s.series_description).strip()):
             if (s.dim4 == 1):
-                info[rest_sbref].append({'item': s.series_id})
+                info[rest_sbref].append({'item': s.series_id,'dir': 'AP'})
             elif (s.dim4 == 780):
-                info[rest].append({'item': s.series_id})
+                info[rest].append({'item': s.series_id,'dir': 'AP'})
                     
         if ('REST_PA' in (s.series_description).strip()):
             if ('SBRef' in (s.series_description).strip()):
