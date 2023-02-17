@@ -51,6 +51,12 @@ def infotodict(seqinfo):
         elif ('MPRAGE' in (s.series_description).strip()):
             info[t13d].append({'item': s.series_id}) 
 
+        elif ('field_mapping' in s.protocol_name):   
+            if (s.dim4 == 1) and ('gre_field_mapping' == (s.series_description).strip()):
+                if('P' in (s.image_type[2].strip()) ):
+                    info[fmap_diff].append({'item': s.series_id})
+                if('M' in (s.image_type[2].strip()) ):
+                    info[fmap_magnitude].append({'item': s.series_id})       
 
     return info
 
