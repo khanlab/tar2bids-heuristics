@@ -2,7 +2,7 @@
 
 #BIDS_DIR=$AUTOBIDS_DATA/Pasternak/Ambroxol/bids
 BIDS_DIR=/project/6033495/cfmm-bids/Pasternak/Ambroxol
-SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
+SUBJ_EXPR=*_{subject}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/ambroxol_heuristic.py
 
