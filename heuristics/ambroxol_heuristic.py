@@ -16,12 +16,18 @@ def infotodict(seqinfo):
     info = cfmminfodict(seqinfo)
 
     rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
+    t13d = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRAGE_run-{item:02d}_T1w')
 
     info[rest]=[]
+    info[t13d]=[]
 
     for idx, s in enumerate(seqinfo):
        
         if ('RS' in (s.series_description).strip()):
-            info[rest].append({'item': s.series_id})      
+            info[rest].append({'item': s.series_id})
+
+        elif ('3DT1' in (s.series_description).strip()):
+            info[t13d].append({'item': s.series_id})        
+              
 
     return info
