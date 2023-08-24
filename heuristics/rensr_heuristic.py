@@ -24,7 +24,7 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
        
-        if ('task' in (s.series_description).strip()):
+        if ('ep_bold_m4' in (s.series_description).strip()):
             if (s.dim4>400):
                     info[task].append({'item': s.series_id})
         
