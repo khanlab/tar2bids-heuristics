@@ -25,11 +25,11 @@ def infotodict(seqinfo):
     for idx, s in enumerate(seqinfo):
        
         if ('ep_bold_m4' in (s.series_description).strip()):
-            if (s.dim4>100):
-                info[task].append({'item': s.series_id})
-            elif ('PA' in (s.series_description).strip()):
+            if ('PA' in (s.series_description).strip()):
                 info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
-
+            elif (s.dim4>1):
+                info[task].append({'item': s.series_id})
+           
     return info
     
 
