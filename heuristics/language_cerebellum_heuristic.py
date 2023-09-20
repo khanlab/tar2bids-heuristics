@@ -20,14 +20,14 @@ def infotodict(seqinfo):
 
     fmap_sbref = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_dir-{dir}_epi')
 
-    t13d = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRAGE_run-{item:02d}_T1w')
+    #t13d = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRAGE_run-{item:02d}_T1w')
 
     
 
     info[task]=[]
     info[task_sbref]=[]
     info[fmap_sbref]=[]
-    info[t13d]=[]
+    #info[t13d]=[]
 
     for idx, s in enumerate(seqinfo):
        
@@ -42,8 +42,8 @@ def infotodict(seqinfo):
                 #if 'SBRef' in (s.series_description).strip():
                 info[fmap_sbref].append({'item': s.series_id,'dir': 'PA'})
 
-        elif ('mp2rage' in (s.series_description).strip()):
-            info[t13d].append({'item': s.series_id})        
+        #elif ('mp2rage' in (s.series_description).strip()):
+        #    info[t13d].append({'item': s.series_id})        
 
 
     return info
