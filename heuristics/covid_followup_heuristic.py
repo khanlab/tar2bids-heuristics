@@ -55,7 +55,7 @@ def infotodict(seqinfo):
 
         elif ('ep2d_diff_mb2_p2_64dirs' in (s.series_description).strip()):
             if (s.dim4==68):
-                info[dwi_ap].append({'item': s.series_id, 'dir': 'PA'})
+                info[dwi_ap].append({'item': s.series_id, 'dir': 'AP'})
 
         elif ('MPRAGE' in (s.series_description).strip()):
             info[t13d].append({'item': s.series_id}) 
