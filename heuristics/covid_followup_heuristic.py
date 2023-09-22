@@ -21,8 +21,8 @@ def infotodict(seqinfo):
 
     rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
 
-    dwi_ap = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_run-{item:02}_dwi')
-    dwi_pa = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_acq-DWI_dir-{dir}_epi')
+    dwi_ap = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_dir_{dir}_run-{item:02}_dwi')
+    dwi_pa = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_dir-{dir}_run-{item:02}_dwi')
 
     t13d = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_acq-MPRAGE_run-{item:02d}_T1w')
 
@@ -55,7 +55,7 @@ def infotodict(seqinfo):
 
         elif ('ep2d_diff_mb2_p2_64dirs' in (s.series_description).strip()):
             if (s.dim4==68):
-                info[dwi_ap].append({'item': s.series_id})
+                info[dwi_ap].append({'item': s.series_id, 'dir': 'PA'})
 
         elif ('MPRAGE' in (s.series_description).strip()):
             info[t13d].append({'item': s.series_id}) 
