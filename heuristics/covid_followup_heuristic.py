@@ -42,7 +42,7 @@ def infotodict(seqinfo):
                 info[task2].append({'item': s.series_id})
 
         elif ('task3' in (s.series_description).strip()):
-            if (s.dim4>100):
+            if (s.dim4>90):
                 info[task3].append({'item': s.series_id})
         
         elif ('restingState' in (s.series_description).strip()):
