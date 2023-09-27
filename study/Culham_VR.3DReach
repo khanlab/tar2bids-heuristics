@@ -1,12 +1,12 @@
 #!/bin/bash
 
-BIDS_DIR=$AUTOBIDS_DATA/Culham/3dReach/bids
+BIDS_DIR=$AUTOBIDS_DATA/Culham/3DReach/bids
 SUBJ_EXPR=*_{subject}  #search string in patient_name
 
 HEURISTIC="$AUTOBIDS_STUDY_CFG_DIR/../heuristics/3dreach_heuristic.py -D -U 300"
 
 #POST_BIDS_PIPELINE=$AUTOBIDS_DIR/pipelines/postproc3T.v0.2
 
-GLOBUS_BIDS_ENDPOINT=
-EMAIL_NOTIFICATION=switt4@uwo.ca
-TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:uniden3T`
+GLOBUS_BIDS_ENDPOINT=8b8f3028-8efd-4f81-85e5-c96e7f9d7e87
+EMAIL_NOTIFICATION=switt4@uwo.ca,edeligia@uwo.ca
+TAR2BIDS_IMG=`shub-cache docker://khanlab/tar2bids:v0.2.2`
