@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BIDS_DIR=$AUTOBIDS_DATA/Diedrichsen/Language-Cerebellum/bids
-SUBJ_EXPR=*_{subject}_{session}  #search string in patient_name
+SUBJ_EXPR=*_[Ss][Uu][Bb]{subject}_{session}  #search string in patient_name
 
 HEURISTIC=$AUTOBIDS_STUDY_CFG_DIR/../heuristics/language_cerebellum_heuristic.py
 
