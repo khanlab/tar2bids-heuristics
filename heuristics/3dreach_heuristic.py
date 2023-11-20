@@ -19,17 +19,22 @@ def infotodict(seqinfo):
     localizer = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-localizer_run-{item:02d}_bold')
     depth = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-DepthLoc_run-{item:02d}_bold')
     fopsr = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-FOPSRLoc_run-{item:02d}_bold')
+    cat = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-3DCat_run-{item:02d}_bold')
     
 
     info[reach]=[]
     info[localizer]=[]
     info[depth]=[]
     info[fopsr]=[]
+    info[cat]=[]
 
     for idx, s in enumerate(seqinfo):
        
         if ('REACH' in (s.series_description).strip()) and (s.dim4==1230):
             info[reach].append({'item': s.series_id})
+
+        elif ('CATLOC' in (s.series_description).strip()) and (s.dim4==1230):
+            info[cat].append({'item': s.series_id})
                     
         elif ('localizer' in (s.series_description).strip()):
             if ('depth' in (s.series_description).strip() and (s.dim4==1008)):
