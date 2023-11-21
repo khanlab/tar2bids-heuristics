@@ -33,7 +33,7 @@ def infotodict(seqinfo):
         if ('REACH' in (s.series_description).strip()) and (s.dim4==1266):
             info[reach].append({'item': s.series_id})
 
-        elif ('CATLOC' in (s.series_description).strip()) and (s.dim4==1230):
+        elif ('CATLOC' in (s.series_description).strip()) and (s.dim4>=1230):
             info[cat].append({'item': s.series_id})
                     
         elif ('localizer' in (s.series_description).strip()):
