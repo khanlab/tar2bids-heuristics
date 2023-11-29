@@ -1,2 +1,2 @@
 # tar2bids-heuristics
-Study heuristics for autobids
+Heudiconv study heuristics for tar2bids
