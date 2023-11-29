@@ -31,7 +31,7 @@ def infotodict(seqinfo):
     fmap_diff = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_phasediff')
     fmap_magnitude = create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_magnitude')
 
-    info = {rest:[], reset_sbref:[], feedback:[], feedback_sbref:[], fmap_sbref:[], dwi_ap:[], dwi_pa:[], t13d:[], fmap_diff:[], fmap_magnitude:[]}
+    info = {rest:[], rest_sbref:[], feedback:[], feedback_sbref:[], fmap_sbref:[], dwi_ap:[], dwi_pa:[], t13d:[], fmap_diff:[], fmap_magnitude:[]}
 
     for idx, s in enumerate(seqinfo):
        
