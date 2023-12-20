@@ -1,3 +1,4 @@
 heuristics/*.pyc
 var/*.txt
 var/log_retrieve_cfmm/*.txt
+__pycache__/
