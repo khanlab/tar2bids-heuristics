@@ -2,3 +2,7 @@ heuristics/*.pyc
 var/*.txt
 var/log_retrieve_cfmm/*.txt
 __pycache__/
+
+study/
+old_study_cfg/
+cron/
