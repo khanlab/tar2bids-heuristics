@@ -3,6 +3,8 @@ var/*.txt
 var/log_retrieve_cfmm/*.txt
 __pycache__/
 
+# Old folders to be ignored on remote repo
 study/
 old_study_cfg/
 cron/
+README.OLD.md
