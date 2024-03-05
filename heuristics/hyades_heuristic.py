@@ -1,5 +1,3 @@
-import os
-import numpy
 from cfmm_base import infotodict as cfmminfodict
 from cfmm_base import create_key
 
@@ -16,40 +14,41 @@ def infotodict(seqinfo):
     info = cfmminfodict(seqinfo)
 
     # key definitions
-    # anat
-    t1w = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_T1w')
-    flair  = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_FLAIR')
-    t2w = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_T2w')
+    # anat  (already included in the cfmminfodict)
+    #t1w = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_run-{item:02d}_T1w')
+    #flair  = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_run-{item:02d}_FLAIR')
+    #t2w = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_run-{item:02d}_T2w')
     
     # dwi. added _acq-mde as a key to identify this as a MDE scan
-    dwi = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_acq-mde_dir-AP_dwi')
+    dwi_mde = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_acq-mde_dir-AP_run-{item:02d}_dwi')
     # Save the RPE (reverse phase-encode) B0 image as a fieldmap (fmap).
-    fmap_rev_phase =  create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_dir-PA_epi')
+    fmap_rev_phase =  create_key('{bids_subject_session_dir}/fmap/{bids_subject_session_prefix}_dir-PA_run-{item:02d}_epi')
     
     # MTS collection
-    mt_off = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_flip-1_mt-off_MTS')
-    mt_on  = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_flip-1_mt-on_MTS')
-    mt_t1w  = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_flip-2_mt-off_MTS')
+    mt_off = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_flip-1_mt-off_run-{item:02d}_MTS')
+    mt_on  = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_flip-1_mt-on_run-{item:02d}_MTS')
+    mt_t1w  = create_key('{bids_subject_session_dir}/anat/{bids_subject_session_prefix}_flip-2_mt-off_run-{item:02d}_MTS')
     
     # Fill data dictionary
-    info[t1w]=[]
-    info[flair]=[]
-    info[t2w]=[]
-    info[dwi]=[]
+    #info[t1w]=[]
+    #info[flair]=[]
+    #info[t2w]=[]
+    info[dwi_mde]=[]
+    info[fmap_rev_phase]=[]
     info[mt_off]=[]
     info[mt_on]=[]
     info[mt_t1w]=[]
-    info[fmap_rev_phase]=[]
+    
 
     # Criteria
     for idx, s in enumerate(seqinfo):
         # anat
-        if ('T1w_MPR**' in s.series_description):
-            info[t1w].append(s.series_id)
-        if ('t2_space_dark-fluid_sag_p2_iso' in s.protocol_name):
-            info[flair].append(s.series_id)
-        if ('T2w_SPC' in s.protocol_name):
-            info[t2w].append(s.series_id)
+        #if ('T1w_MPR**' in s.series_description):
+        #    info[t1w].append(s.series_id)
+        #if ('t2_space_dark-fluid_sag_p2_iso' in s.protocol_name):
+        #    info[flair].append(s.series_id)
+        #if ('T2w_SPC' in s.protocol_name):
+        #    info[t2w].append(s.series_id)
 
         #  dwi
         if ('UFA_AP' in s.protocol_name):
