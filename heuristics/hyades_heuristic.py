@@ -52,19 +52,19 @@ def infotodict(seqinfo):
 
         #  dwi_mde
         if ('UFA_AP' in s.protocol_name):
-            info[dwi_mde].append('item': s.series_id)
+            info[dwi_mde].append({'item': s.series_id})
         if ('UFA_PA_B0' in s.protocol_name):
-            info[fmap_rev_phase] = ['item': s.series_id]
+            info[fmap_rev_phase].append({'item': s.series_id})
 
         # MTS collection. Only for magnitude Images
         # use == operator to disentangle shared gre3D_mtOFF string case
         if ('gre3D_mtOFF' == s.series_description) and ('M' in s.image_type[2].strip() ):
-            info[mt_off] = ['item': s.series_id]
+            info[mt_off].append({'item': s.series_id})
 
         if ('gre3D_mtON' == s.series_description) and ('M' in s.image_type[2].strip() ):
-            info[mt_on] = ['item': s.series_id]
+            info[mt_on].append({'item': s.series_id})
                 
         if ('gre3D_mtOFF_TR12' == s.series_description) and ('M' in s.image_type[2].strip() ):
-            info[mt_t1w] = ['item': s.series_id]
+            info[mt_t1w].append({'item': s.series_id})
                     
     return info
