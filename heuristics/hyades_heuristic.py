@@ -42,7 +42,7 @@ def infotodict(seqinfo):
 
     # Criteria
     for idx, s in enumerate(seqinfo):
-        # anat
+        # anat  (already included in the cfmminfodict)
         #if ('T1w_MPR**' in s.series_description):
         #    info[t1w].append(s.series_id)
         #if ('t2_space_dark-fluid_sag_p2_iso' in s.protocol_name):
@@ -50,9 +50,9 @@ def infotodict(seqinfo):
         #if ('T2w_SPC' in s.protocol_name):
         #    info[t2w].append(s.series_id)
 
-        #  dwi
+        #  dwi_mde
         if ('UFA_AP' in s.protocol_name):
-            info[dwi].append(s.series_id)
+            info[dwi_mde].append(s.series_id)
         if ('UFA_PA_B0' in s.protocol_name):
             info[fmap_rev_phase] = [s.series_id]
 
