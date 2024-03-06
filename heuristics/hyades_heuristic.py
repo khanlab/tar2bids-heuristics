@@ -38,7 +38,10 @@ def infotodict(seqinfo):
     info[mt_off]=[]
     info[mt_on]=[]
     info[mt_t1w]=[]
-    
+
+    # Remove uFA key from cfmm_base.py to avoid redundancy
+    dwi_ufa = create_key('{bids_subject_session_dir}/dwi/{bids_subject_session_prefix}_acq-uFA_run-{item:02d}_dwi')
+    del info[dwi_ufa]
 
     # Criteria
     for idx, s in enumerate(seqinfo):
