@@ -15,9 +15,9 @@ def infotodict(seqinfo):
     # call cfmm for general labelling and get dictionary
     #info = cfmminfodict(seqinfo)
 
-    task1 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-task1_run-{item:02d}_bold')
-    task2 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-task2_run-{item:02d}_bold')
-    task3 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-task3_run-{item:02d}_bold')
+    task1 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-NMI_run-{item:02d}_bold')
+    task2 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-SRET_run-{item:02d}_bold')
+    task3 = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-PMI_run-{item:02d}_bold')
 
     rest = create_key('{bids_subject_session_dir}/func/{bids_subject_session_prefix}_task-rest_run-{item:02d}_bold')
 
@@ -32,18 +32,15 @@ def infotodict(seqinfo):
     info = {task1:[], task2:[], task3:[], rest:[], dwi_ap:[], dwi_pa:[], t13d:[], fmap_diff:[], fmap_magnitude:[]}
 
     for idx, s in enumerate(seqinfo):
-       
-        if ('task1' in (s.series_description).strip()):
-            if (s.dim4>100):
-                info[task1].append({'item': s.series_id})
 
-        elif ('task2' in (s.series_description).strip()):
-            if (s.dim4>100):
-                info[task2].append({'item': s.series_id})
+        if ('NMI' in (s.series_description).strip()):
+            info[task1].append({'item': s.series_id})
 
-        elif ('task3' in (s.series_description).strip()):
-            if (s.dim4>90):
-                info[task3].append({'item': s.series_id})
+        elif ('SRET' in (s.series_description).strip()):
+            info[task2].append({'item': s.series_id})
+
+        elif ('PMI' in (s.series_description).strip()):
+            info[task3].append({'item': s.series_id})
         
         elif ('restingState' in (s.series_description).strip()):
             if (s.dim4>100):
