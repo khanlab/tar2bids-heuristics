@@ -240,4 +240,12 @@ def infotodict(seqinfo):
                     if "DIS3D" in (s.image_type[3].strip()):
                         info[nm_DIS3D_phase_echo_GRE].append({"item": s.series_id})
 
+        elif ('field_mapping' in s.protocol_name):   
+            if (s.dim4 == 1) and ('gre_field_mapping' == (s.series_description).strip()):
+                if 'P' in s.image_type[2].strip():
+                    info[fmap_diff].append({'item': s.series_id})
+                if 'M' in s.image_type[2].strip():
+                    info[fmap_magnitude].append({'item': s.series_id})  
+
+
     return info
